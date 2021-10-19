@@ -209,8 +209,8 @@ void InitScoreBoard(void) {
 
     score_board.pos.x = 420;
     score_board.pos.y = 40;
-    score_board.pos.w = 0;
-    score_board.pos.h = 0;
+    // score_board.pos.w = 0;
+    // score_board.pos.h = 0;
 
     return;
 }
@@ -219,8 +219,8 @@ void InitPlayer(void) {
     player.texture = IMG_LoadTexture(app.renderer, "./gfx/Player.png");
     player.pos.x = SCREEN_WIDTH / 2;
     player.pos.y = SCREEN_HEIGHT / 2;
-    player.pos.w = PLAYER_WIDTH;
-    player.pos.h = PLAYER_HEIGHT;
+    // player.pos.w = PLAYER_WIDTH;
+    // player.pos.h = PLAYER_HEIGHT;
     player.health = 1;
 
     return;
@@ -229,8 +229,8 @@ void InitPlayer(void) {
 void InitBullet(void) {
     for (int i = 0; i < NUM_BULLETS; i++) {
         bullet[i].texture = IMG_LoadTexture(app.renderer, "./gfx/Bullet.png");
-        bullet[i].pos.w = BULLET_WIDTH;
-        bullet[i].pos.h = BULLET_HEIGHT;
+        // bullet[i].pos.w = BULLET_WIDTH;
+        // bullet[i].pos.h = BULLET_HEIGHT;
         RandSpawnBullet(&bullet[i]);
     }
 
