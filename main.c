@@ -21,8 +21,8 @@
 
 #define BULLET_WIDTH 8
 #define BULLET_HEIGHT 8
-#define BULLET_SPEED 6
-#define NUM_BULLETS 14
+#define BULLET_SPEED 8
+#define NUM_BULLETS 16
 
 #define FONTSIZE 20
 
