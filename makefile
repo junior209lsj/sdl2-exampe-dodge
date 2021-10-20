@@ -1,6 +1,6 @@
 CC = gcc
 
-TARGET = avoidgame
+TARGET = dodger
 
 CFLAGS += `sdl2-config --cflags`
 CFLAGS += -g -lefence
@@ -15,4 +15,7 @@ OBJS = $(patsubst %.c,%.o,$(SRCS))
 
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LDFLAGS)
+
+clean:
+	@rm -rf *.o
 
