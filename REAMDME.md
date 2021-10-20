@@ -87,4 +87,13 @@ $ proj_dir/src$ ../dodger
 
  ## 화면 초기화하기
 
-`ClearWindow()` 함수는 화면을 지정된 색깔(흰색)으로 초기화하여 바로 전 루프에 그려진 내용을 모두 지운다. 
+`ClearWindow()` 함수는 화면을 지정된 색깔(흰색)으로 초기화하여 바로 전 루프에 그려진 내용을 모두 지운다. 이 기능을 구현하기 위해 `SDL2`의 `SDL_SetRenderDrawColor()`와 `SDL_RenderClear()`함수를 사용한다. 각 함수의 기능은 다음과 같다.
+
+* `SDL_SetRenderDrawColor()`: 그리기에 사용할 색깔을 지정한다. 배경색이 흰색이므로 흰색에 해당하는 RGB값 `{255, 255, 255}`와 알파 채널(투명도) `255`를 인자로 준다.
+* `SDL_RenderClear()`: 현재 렌더링 타겟을 지우고 drawing color (`SDL_SetRenderDrawColor()`에서 지정한 색)으로 전부 채운다.
+
+## 외부 입력 받기
+
+외부 입력은 `GetInput()`함수가 처리한다. 이 함수에서는 이벤트를 저장하는 공간에 남아 있는 이벤트를 순서대로 `SDL_PollEvent()`를 이용하여 가져 온다. `SDL_PollEvent()`는 현재 pending event를 `SDL2`에서 정의한 `SDL_Event`라는 공용체에 담는다 (call by reference로 인자를 줘서 인자로 전달된 `SDL_Event` 구조체에 내용을 저장함). 그리고 `SDL_Event`의 멤버인 `type`을 통해 (1) 창 닫기 버튼을 눌렀을 경우 (`SDL_QUIT`); (2) 누르고 있던 키를 뗐을 경우 (`SDL_KEYUP`); (3) 키보드의 키를 누를 경우 (`SDL_KEYDOWN`)에 대한 응답을 수행한다.
+
+* 
