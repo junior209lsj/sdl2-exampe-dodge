@@ -1,0 +1,5 @@
+<map id="input.h" name="input.h">
+<area shape="rect" id="node2" href="$input_8c.html" title="키보드 입력 발생 시 처리하는 함수 정의 " alt="" coords="5,80,67,107"/>
+<area shape="rect" id="node3" href="$main_8h.html" title="각 모듈 헤더 파일 include 및 전역 변수 선언 " alt="" coords="91,80,152,107"/>
+<area shape="rect" id="node4" href="$main_8c.html" title="dodger 게임 main 함수를 정의한 소스 파일 " alt="" coords="91,155,152,181"/>
+</map>

@@ -1,0 +1,223 @@
+\hypertarget{action_8h}{}\section{action.\+h File Reference}
+\label{action_8h}\index{action.\+h@{action.\+h}}
+
+
+키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행하는 함수 선언  
+
+
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for action.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{action_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{action_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{action_8h_a8738780a1642e9d07f6e89e5e48f647f}{Logic\+Game} (void)
+\begin{DoxyCompactList}\small\item\em 게임 진행 중일 시 필요한 액션을 순차적으로 수행 \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_a582c79a5f61e7bf0a34e40fd59aa17c2}{Logic\+Game\+Over} (void)
+\begin{DoxyCompactList}\small\item\em 게임오버된 상태에 필요한 액션을 순차적으로 수행 \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_ad1c341bd8d66cfa6307f9eda7fcb517f}{Act\+Player} (void)
+\begin{DoxyCompactList}\small\item\em 키보드 입력 상태에 따라 주인공의 액션을 수행. 누른 화살표 버튼에 따라 움직이고, 화면 밖으로 나갈 수 없음. \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_a94b64a686b9deac756fc84a1f21d182a}{Act\+Bullet} (void)
+\begin{DoxyCompactList}\small\item\em 총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고, 화면 밖으로 나가면 리스폰됨. \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_a7d7e08b4f43179e1c112660ebf499f38}{Act\+Score\+Board} (void)
+\begin{DoxyCompactList}\small\item\em 스코어보드 문자열 생성 (전역변수 score에 따라 현재 점수 표시) \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_aa65db23b8a8d08fdab84f41d2d77fc16}{Act\+Final\+Score\+Board} (void)
+\begin{DoxyCompactList}\small\item\em 게임 오버 시 최종 스코어 문자열 생성 (전역변수 score에 따라 최종 점수 표시) \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_a95ce7534309c25f41e7f6c95a84526fe}{Act\+Check\+Death} (void)
+\begin{DoxyCompactList}\small\item\em 총알과 주인공의 충돌 여부를 계산하고 충돌 시 게임 오버시킴 \end{DoxyCompactList}\item 
+void \hyperlink{action_8h_a981d44fa9ea88e54c20d6a74c037277d}{Act\+Game\+Over} (void)
+\begin{DoxyCompactList}\small\item\em 게임 오버 화면의 액션 수행. 아무 것도 수행하지 않다가, R키를 누르면 모든 구조체 초기화 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_app}{App} \hyperlink{action_8h_a05b5a24325d46227633053ca49de6234}{app}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{action_8h_aa98761129f4d5e69468dcbdddbd88d9d}{player}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{action_8h_a3969fcbadddf924ee352d7e232919bf5}{bullet} \mbox{[}\hyperlink{defs_8h_ac2f0ab514de41108a223c4edd49a6dfb}{N\+U\+M\+\_\+\+B\+U\+L\+L\+E\+TS}\mbox{]}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{action_8h_a30f03aaf13c260e57b759c650c99468e}{game\+\_\+over}
+\item 
+\hyperlink{struct_text}{Text} \hyperlink{action_8h_afef3fdea043a22bb19f93f3799421010}{score\+\_\+board}
+\item 
+char \hyperlink{action_8h_ae3c21975ce19d3b28f11d50419e15ab9}{score\+\_\+text} \mbox{[}\hyperlink{defs_8h_aeca034f67218340ecb2261a22c2f3dcd}{B\+U\+F\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{action_8h_aef160b7437d94056f1dc59646cd5b87d}{score}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행하는 함수 선언 
+
+\begin{DoxyAuthor}{Author}
+이성재 (\href{mailto:seongjae.lee.1118@gmail.com}{\tt seongjae.\+lee.\+1118@gmail.\+com}) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{action_8h_a94b64a686b9deac756fc84a1f21d182a}\label{action_8h_a94b64a686b9deac756fc84a1f21d182a}} 
+\index{action.\+h@{action.\+h}!Act\+Bullet@{Act\+Bullet}}
+\index{Act\+Bullet@{Act\+Bullet}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Bullet()}{ActBullet()}}
+{\footnotesize\ttfamily void Act\+Bullet (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고, 화면 밖으로 나가면 리스폰됨. 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a95ce7534309c25f41e7f6c95a84526fe}\label{action_8h_a95ce7534309c25f41e7f6c95a84526fe}} 
+\index{action.\+h@{action.\+h}!Act\+Check\+Death@{Act\+Check\+Death}}
+\index{Act\+Check\+Death@{Act\+Check\+Death}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Check\+Death()}{ActCheckDeath()}}
+{\footnotesize\ttfamily void Act\+Check\+Death (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+총알과 주인공의 충돌 여부를 계산하고 충돌 시 게임 오버시킴 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_aa65db23b8a8d08fdab84f41d2d77fc16}\label{action_8h_aa65db23b8a8d08fdab84f41d2d77fc16}} 
+\index{action.\+h@{action.\+h}!Act\+Final\+Score\+Board@{Act\+Final\+Score\+Board}}
+\index{Act\+Final\+Score\+Board@{Act\+Final\+Score\+Board}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Final\+Score\+Board()}{ActFinalScoreBoard()}}
+{\footnotesize\ttfamily void Act\+Final\+Score\+Board (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+게임 오버 시 최종 스코어 문자열 생성 (전역변수 score에 따라 최종 점수 표시) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a981d44fa9ea88e54c20d6a74c037277d}\label{action_8h_a981d44fa9ea88e54c20d6a74c037277d}} 
+\index{action.\+h@{action.\+h}!Act\+Game\+Over@{Act\+Game\+Over}}
+\index{Act\+Game\+Over@{Act\+Game\+Over}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Game\+Over()}{ActGameOver()}}
+{\footnotesize\ttfamily void Act\+Game\+Over (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+게임 오버 화면의 액션 수행. 아무 것도 수행하지 않다가, R키를 누르면 모든 구조체 초기화 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_ad1c341bd8d66cfa6307f9eda7fcb517f}\label{action_8h_ad1c341bd8d66cfa6307f9eda7fcb517f}} 
+\index{action.\+h@{action.\+h}!Act\+Player@{Act\+Player}}
+\index{Act\+Player@{Act\+Player}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Player()}{ActPlayer()}}
+{\footnotesize\ttfamily void Act\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+키보드 입력 상태에 따라 주인공의 액션을 수행. 누른 화살표 버튼에 따라 움직이고, 화면 밖으로 나갈 수 없음. 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a7d7e08b4f43179e1c112660ebf499f38}\label{action_8h_a7d7e08b4f43179e1c112660ebf499f38}} 
+\index{action.\+h@{action.\+h}!Act\+Score\+Board@{Act\+Score\+Board}}
+\index{Act\+Score\+Board@{Act\+Score\+Board}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Act\+Score\+Board()}{ActScoreBoard()}}
+{\footnotesize\ttfamily void Act\+Score\+Board (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+스코어보드 문자열 생성 (전역변수 score에 따라 현재 점수 표시) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a8738780a1642e9d07f6e89e5e48f647f}\label{action_8h_a8738780a1642e9d07f6e89e5e48f647f}} 
+\index{action.\+h@{action.\+h}!Logic\+Game@{Logic\+Game}}
+\index{Logic\+Game@{Logic\+Game}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Logic\+Game()}{LogicGame()}}
+{\footnotesize\ttfamily void Logic\+Game (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+게임 진행 중일 시 필요한 액션을 순차적으로 수행 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a582c79a5f61e7bf0a34e40fd59aa17c2}\label{action_8h_a582c79a5f61e7bf0a34e40fd59aa17c2}} 
+\index{action.\+h@{action.\+h}!Logic\+Game\+Over@{Logic\+Game\+Over}}
+\index{Logic\+Game\+Over@{Logic\+Game\+Over}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{Logic\+Game\+Over()}{LogicGameOver()}}
+{\footnotesize\ttfamily void Logic\+Game\+Over (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+게임오버된 상태에 필요한 액션을 순차적으로 수행 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{action_8h_a05b5a24325d46227633053ca49de6234}\label{action_8h_a05b5a24325d46227633053ca49de6234}} 
+\index{action.\+h@{action.\+h}!app@{app}}
+\index{app@{app}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \hyperlink{struct_app}{App} app}
+
+프로그램 전체 단위로 관리하는 전역 객체 모음 \mbox{\Hypertarget{action_8h_a3969fcbadddf924ee352d7e232919bf5}\label{action_8h_a3969fcbadddf924ee352d7e232919bf5}} 
+\index{action.\+h@{action.\+h}!bullet@{bullet}}
+\index{bullet@{bullet}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{bullet}{bullet}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} bullet\mbox{[}\hyperlink{defs_8h_ac2f0ab514de41108a223c4edd49a6dfb}{N\+U\+M\+\_\+\+B\+U\+L\+L\+E\+TS}\mbox{]}}
+
+총알의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{action_8h_a30f03aaf13c260e57b759c650c99468e}\label{action_8h_a30f03aaf13c260e57b759c650c99468e}} 
+\index{action.\+h@{action.\+h}!game\+\_\+over@{game\+\_\+over}}
+\index{game\+\_\+over@{game\+\_\+over}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+over}{game\_over}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} game\+\_\+over}
+
+게임오버 화면의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{action_8h_aa98761129f4d5e69468dcbdddbd88d9d}\label{action_8h_aa98761129f4d5e69468dcbdddbd88d9d}} 
+\index{action.\+h@{action.\+h}!player@{player}}
+\index{player@{player}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} player}
+
+주인공의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{action_8h_aef160b7437d94056f1dc59646cd5b87d}\label{action_8h_aef160b7437d94056f1dc59646cd5b87d}} 
+\index{action.\+h@{action.\+h}!score@{score}}
+\index{score@{score}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int score}
+
+게임 스코어 \mbox{\Hypertarget{action_8h_afef3fdea043a22bb19f93f3799421010}\label{action_8h_afef3fdea043a22bb19f93f3799421010}} 
+\index{action.\+h@{action.\+h}!score\+\_\+board@{score\+\_\+board}}
+\index{score\+\_\+board@{score\+\_\+board}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{score\+\_\+board}{score\_board}}
+{\footnotesize\ttfamily \hyperlink{struct_text}{Text} score\+\_\+board}
+
+우상단 스코어보드 문자열을 설명하는 Text형 구조체 \mbox{\Hypertarget{action_8h_ae3c21975ce19d3b28f11d50419e15ab9}\label{action_8h_ae3c21975ce19d3b28f11d50419e15ab9}} 
+\index{action.\+h@{action.\+h}!score\+\_\+text@{score\+\_\+text}}
+\index{score\+\_\+text@{score\+\_\+text}!action.\+h@{action.\+h}}
+\subsubsection{\texorpdfstring{score\+\_\+text}{score\_text}}
+{\footnotesize\ttfamily char score\+\_\+text\mbox{[}\hyperlink{defs_8h_aeca034f67218340ecb2261a22c2f3dcd}{B\+U\+F\+S\+I\+ZE}\mbox{]}}
+
+스코어보드에 출력할 문자열 

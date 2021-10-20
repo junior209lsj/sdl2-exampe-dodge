@@ -1,0 +1,5 @@
+<map id="draw.h" name="draw.h">
+<area shape="rect" id="node2" href="$draw_8c.html" title="텍스쳐 렌더링을 수행하는 함수 정의 " alt="" coords="5,80,67,107"/>
+<area shape="rect" id="node3" href="$main_8h.html" title="각 모듈 헤더 파일 include 및 전역 변수 선언 " alt="" coords="91,80,152,107"/>
+<area shape="rect" id="node4" href="$main_8c.html" title="dodger 게임 main 함수를 정의한 소스 파일 " alt="" coords="91,155,152,181"/>
+</map>

@@ -1,0 +1,170 @@
+\hypertarget{init_8c}{}\section{init.\+c File Reference}
+\label{init_8c}\index{init.\+c@{init.\+c}}
+
+
+무한 루프 진입 전 객체 및 S\+DL 요소 초기화를 위한 함수 정의  
+
+
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+Include dependency graph for init.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{init_8c_a427bf0e70445f92f07adb6512985699d}{Init\+S\+DL} (void)
+\begin{DoxyCompactList}\small\item\em 프로그램 수행에 필요한 초기화 과정 수행 \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a82fb88870e950b4d0b484e2744d6b064}{Init\+T\+TF} (void)
+\begin{DoxyCompactList}\small\item\em T\+T\+F폰트 사용을 위한 초기화 과정 수행 \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_aa2128129f94d9519cfc62de7e308bac7}{Quit\+S\+DL} (int flag)
+\begin{DoxyCompactList}\small\item\em 프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료 \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a6ba0c53f3cc9980ebe30a2286632bb45}{Quit\+T\+TF} (void)
+\begin{DoxyCompactList}\small\item\em 연 폰트 파일을 닫고 T\+TF 엔진 종료 \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a0a26d5779d3a2a2c898c3f52b74ddf3a}{Init\+Memory\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 모든 전역 변수의 메모리 내용 0으로 초기화 \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_ab233da79a00de5b6a0752c031b1f9855}{Init\+Score\+Board} (void)
+\begin{DoxyCompactList}\small\item\em 스코어보드 초기화(글씨 색깔, 위치) \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a068fc32638e272bb7c61516d6efe4b9e}{Init\+Player} (void)
+\begin{DoxyCompactList}\small\item\em 플레이어 초기화 (텍스쳐 불러오기, 위치 설정, 체력 1로 설정) \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a30c1a22616a4bc3d87ab7197913e62d6}{Init\+Bullet} (void)
+\begin{DoxyCompactList}\small\item\em 총알 초기화 (텍스쳐 불러오기, 랜덤 위치에 소환, 총알-\/주인공 간 각도계산) \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_ac20fccf3f37ac898a607e7ca2aae7081}{Init\+Game\+Over} (void)
+\begin{DoxyCompactList}\small\item\em 게임오버 화면 초기화 (텍스쳐, 위치) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+무한 루프 진입 전 객체 및 S\+DL 요소 초기화를 위한 함수 정의 
+
+\begin{DoxyAuthor}{Author}
+이성재 (\href{mailto:seongjae.lee.1118@gmail.com}{\tt seongjae.\+lee.\+1118@gmail.\+com}) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{init_8c_a30c1a22616a4bc3d87ab7197913e62d6}\label{init_8c_a30c1a22616a4bc3d87ab7197913e62d6}} 
+\index{init.\+c@{init.\+c}!Init\+Bullet@{Init\+Bullet}}
+\index{Init\+Bullet@{Init\+Bullet}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+Bullet()}{InitBullet()}}
+{\footnotesize\ttfamily void Init\+Bullet (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+총알 초기화 (텍스쳐 불러오기, 랜덤 위치에 소환, 총알-\/주인공 간 각도계산) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_ac20fccf3f37ac898a607e7ca2aae7081}\label{init_8c_ac20fccf3f37ac898a607e7ca2aae7081}} 
+\index{init.\+c@{init.\+c}!Init\+Game\+Over@{Init\+Game\+Over}}
+\index{Init\+Game\+Over@{Init\+Game\+Over}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+Game\+Over()}{InitGameOver()}}
+{\footnotesize\ttfamily void Init\+Game\+Over (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+게임오버 화면 초기화 (텍스쳐, 위치) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a0a26d5779d3a2a2c898c3f52b74ddf3a}\label{init_8c_a0a26d5779d3a2a2c898c3f52b74ddf3a}} 
+\index{init.\+c@{init.\+c}!Init\+Memory\+Set@{Init\+Memory\+Set}}
+\index{Init\+Memory\+Set@{Init\+Memory\+Set}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+Memory\+Set()}{InitMemorySet()}}
+{\footnotesize\ttfamily void Init\+Memory\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+모든 전역 변수의 메모리 내용 0으로 초기화 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a068fc32638e272bb7c61516d6efe4b9e}\label{init_8c_a068fc32638e272bb7c61516d6efe4b9e}} 
+\index{init.\+c@{init.\+c}!Init\+Player@{Init\+Player}}
+\index{Init\+Player@{Init\+Player}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+Player()}{InitPlayer()}}
+{\footnotesize\ttfamily void Init\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 초기화 (텍스쳐 불러오기, 위치 설정, 체력 1로 설정) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_ab233da79a00de5b6a0752c031b1f9855}\label{init_8c_ab233da79a00de5b6a0752c031b1f9855}} 
+\index{init.\+c@{init.\+c}!Init\+Score\+Board@{Init\+Score\+Board}}
+\index{Init\+Score\+Board@{Init\+Score\+Board}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+Score\+Board()}{InitScoreBoard()}}
+{\footnotesize\ttfamily void Init\+Score\+Board (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+스코어보드 초기화(글씨 색깔, 위치) 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a427bf0e70445f92f07adb6512985699d}\label{init_8c_a427bf0e70445f92f07adb6512985699d}} 
+\index{init.\+c@{init.\+c}!Init\+S\+DL@{Init\+S\+DL}}
+\index{Init\+S\+DL@{Init\+S\+DL}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+S\+D\+L()}{InitSDL()}}
+{\footnotesize\ttfamily void Init\+S\+DL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+프로그램 수행에 필요한 초기화 과정 수행 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a82fb88870e950b4d0b484e2744d6b064}\label{init_8c_a82fb88870e950b4d0b484e2744d6b064}} 
+\index{init.\+c@{init.\+c}!Init\+T\+TF@{Init\+T\+TF}}
+\index{Init\+T\+TF@{Init\+T\+TF}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Init\+T\+T\+F()}{InitTTF()}}
+{\footnotesize\ttfamily void Init\+T\+TF (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+T\+T\+F폰트 사용을 위한 초기화 과정 수행 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_aa2128129f94d9519cfc62de7e308bac7}\label{init_8c_aa2128129f94d9519cfc62de7e308bac7}} 
+\index{init.\+c@{init.\+c}!Quit\+S\+DL@{Quit\+S\+DL}}
+\index{Quit\+S\+DL@{Quit\+S\+DL}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Quit\+S\+D\+L()}{QuitSDL()}}
+{\footnotesize\ttfamily void Quit\+S\+DL (\begin{DoxyParamCaption}\item[{int}]{flag }\end{DoxyParamCaption})}
+
+
+
+프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & 메인 함수에 넘겨줄 프로그램 리턴값\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a6ba0c53f3cc9980ebe30a2286632bb45}\label{init_8c_a6ba0c53f3cc9980ebe30a2286632bb45}} 
+\index{init.\+c@{init.\+c}!Quit\+T\+TF@{Quit\+T\+TF}}
+\index{Quit\+T\+TF@{Quit\+T\+TF}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{Quit\+T\+T\+F()}{QuitTTF()}}
+{\footnotesize\ttfamily void Quit\+T\+TF (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+연 폰트 파일을 닫고 T\+TF 엔진 종료 
+
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}

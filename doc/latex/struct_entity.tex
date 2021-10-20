@@ -1,0 +1,57 @@
+\hypertarget{struct_entity}{}\section{Entity Struct Reference}
+\label{struct_entity}\index{Entity@{Entity}}
+
+
+\hyperlink{struct_entity}{Entity}\+: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알)  
+
+
+
+
+{\ttfamily \#include $<$defs.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{struct_entity_a6d76b33d9bd8ca3323e8d62dfac72481}{pos}
+\item 
+double \hyperlink{struct_entity_a2e774bbee1f449ee3bfacd06880c1566}{theta}
+\item 
+int \hyperlink{struct_entity_ab5bf0c97620636e04b271601e2133884}{health}
+\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{struct_entity_a7e3a5bd3ee8f06d2641b183b4ea87933}{texture}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_entity}{Entity}\+: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_entity_ab5bf0c97620636e04b271601e2133884}\label{struct_entity_ab5bf0c97620636e04b271601e2133884}} 
+\index{Entity@{Entity}!health@{health}}
+\index{health@{health}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily int Entity\+::health}
+
+주인공의 체력 상태를 나타내는 변수 (생존 1, 사망 0) \mbox{\Hypertarget{struct_entity_a6d76b33d9bd8ca3323e8d62dfac72481}\label{struct_entity_a6d76b33d9bd8ca3323e8d62dfac72481}} 
+\index{Entity@{Entity}!pos@{pos}}
+\index{pos@{pos}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Entity\+::pos}
+
+직사각형 객체의 상태를 나타내기 위한 구조체 여기에 객체의 좌표, 위치 저장 \mbox{\Hypertarget{struct_entity_a7e3a5bd3ee8f06d2641b183b4ea87933}\label{struct_entity_a7e3a5bd3ee8f06d2641b183b4ea87933}} 
+\index{Entity@{Entity}!texture@{texture}}
+\index{texture@{texture}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture$\ast$ Entity\+::texture}
+
+텍스쳐를 담고 있는 구조체 (그림파일을 열어 텍스쳐에 저장) \mbox{\Hypertarget{struct_entity_a2e774bbee1f449ee3bfacd06880c1566}\label{struct_entity_a2e774bbee1f449ee3bfacd06880c1566}} 
+\index{Entity@{Entity}!theta@{theta}}
+\index{theta@{theta}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily double Entity\+::theta}
+
+총알-\/주인공 간 각도를 저장하는 변수 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{defs_8h}{defs.\+h}\end{DoxyCompactItemize}

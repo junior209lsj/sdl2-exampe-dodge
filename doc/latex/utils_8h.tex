@@ -1,0 +1,207 @@
+\hypertarget{utils_8h}{}\section{utils.\+h File Reference}
+\label{utils_8h}\index{utils.\+h@{utils.\+h}}
+
+
+액션 수행에 필요한 부가적 계산을 수행하는 함수 선언  
+
+
+{\ttfamily \#include \char`\"{}defs.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{utils_8h_a53db3177844e1195be84da6b045d19cb}{Check\+Collision\+Wall} (\hyperlink{struct_entity}{Entity} $\ast$object)
+\begin{DoxyCompactList}\small\item\em 주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인 \end{DoxyCompactList}\item 
+int \hyperlink{utils_8h_ad09f6116d9d2c9a447bff3c40b69d29a}{Check\+Collision\+Objects} (\hyperlink{struct_entity}{Entity} $\ast$object\+\_\+a, \hyperlink{struct_entity}{Entity} $\ast$object\+\_\+b)
+\begin{DoxyCompactList}\small\item\em 두 \hyperlink{struct_entity}{Entity} 간 충돌 여부를 판단 \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a5cb63b050f48798afe28117861e98271}{Rand\+Spawn\+Bullet} (\hyperlink{struct_entity}{Entity} $\ast$object)
+\begin{DoxyCompactList}\small\item\em 좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산 \end{DoxyCompactList}\item 
+int \hyperlink{utils_8h_aff4ea7a61b3342b59e917bcc7dd08500}{Rand\+Int} (int min\+\_\+val, int max\+\_\+val)
+\begin{DoxyCompactList}\small\item\em \mbox{[}min\+\_\+val, max\+\_\+val) 사이의 무작위 정수를 리턴 \end{DoxyCompactList}\item 
+double \hyperlink{utils_8h_a87d33d8b54bca3955ef58a77d52995eb}{Rand\+Double} (double min\+\_\+val, double max\+\_\+val)
+\begin{DoxyCompactList}\small\item\em \mbox{[}min\+\_\+val, max\+\_\+val) 사이의 무작위 실수를 리턴 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_app}{App} \hyperlink{utils_8h_a05b5a24325d46227633053ca49de6234}{app}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{utils_8h_aa98761129f4d5e69468dcbdddbd88d9d}{player}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{utils_8h_a3969fcbadddf924ee352d7e232919bf5}{bullet} \mbox{[}\hyperlink{defs_8h_ac2f0ab514de41108a223c4edd49a6dfb}{N\+U\+M\+\_\+\+B\+U\+L\+L\+E\+TS}\mbox{]}
+\item 
+\hyperlink{struct_entity}{Entity} \hyperlink{utils_8h_a30f03aaf13c260e57b759c650c99468e}{game\+\_\+over}
+\item 
+\hyperlink{struct_text}{Text} \hyperlink{utils_8h_afef3fdea043a22bb19f93f3799421010}{score\+\_\+board}
+\item 
+char \hyperlink{utils_8h_ae3c21975ce19d3b28f11d50419e15ab9}{score\+\_\+text} \mbox{[}\hyperlink{defs_8h_aeca034f67218340ecb2261a22c2f3dcd}{B\+U\+F\+S\+I\+ZE}\mbox{]}
+\item 
+int \hyperlink{utils_8h_aef160b7437d94056f1dc59646cd5b87d}{score}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 
+
+\begin{DoxyAuthor}{Author}
+이성재 (\href{mailto:seongjae.lee.1118@gmail.com}{\tt seongjae.\+lee.\+1118@gmail.\+com}) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_ad09f6116d9d2c9a447bff3c40b69d29a}\label{utils_8h_ad09f6116d9d2c9a447bff3c40b69d29a}} 
+\index{utils.\+h@{utils.\+h}!Check\+Collision\+Objects@{Check\+Collision\+Objects}}
+\index{Check\+Collision\+Objects@{Check\+Collision\+Objects}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{Check\+Collision\+Objects()}{CheckCollisionObjects()}}
+{\footnotesize\ttfamily int Check\+Collision\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{struct_entity}{Entity} $\ast$}]{object\+\_\+a,  }\item[{\hyperlink{struct_entity}{Entity} $\ast$}]{object\+\_\+b }\end{DoxyParamCaption})}
+
+
+
+두 \hyperlink{struct_entity}{Entity} 간 충돌 여부를 판단 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+a} & 충돌 여부를 판단할 첫 번째 \hyperlink{struct_entity}{Entity} 구조체 \\
+\hline
+{\em object\+\_\+b} & 충돌 여부를 판단할 두 번째 \hyperlink{struct_entity}{Entity} 구조체\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+충돌했으면 1, 충돌하지 않았으면 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a53db3177844e1195be84da6b045d19cb}\label{utils_8h_a53db3177844e1195be84da6b045d19cb}} 
+\index{utils.\+h@{utils.\+h}!Check\+Collision\+Wall@{Check\+Collision\+Wall}}
+\index{Check\+Collision\+Wall@{Check\+Collision\+Wall}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{Check\+Collision\+Wall()}{CheckCollisionWall()}}
+{\footnotesize\ttfamily int Check\+Collision\+Wall (\begin{DoxyParamCaption}\item[{\hyperlink{struct_entity}{Entity} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & 탐지 대상 Entity형 구조체\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+벽 밖으로 넘어가면 1, 벽 안에 있으면 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a87d33d8b54bca3955ef58a77d52995eb}\label{utils_8h_a87d33d8b54bca3955ef58a77d52995eb}} 
+\index{utils.\+h@{utils.\+h}!Rand\+Double@{Rand\+Double}}
+\index{Rand\+Double@{Rand\+Double}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{Rand\+Double()}{RandDouble()}}
+{\footnotesize\ttfamily double Rand\+Double (\begin{DoxyParamCaption}\item[{double}]{min\+\_\+val,  }\item[{double}]{max\+\_\+val }\end{DoxyParamCaption})}
+
+
+
+\mbox{[}min\+\_\+val, max\+\_\+val) 사이의 무작위 실수를 리턴 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+\_\+val} & 최솟값 \\
+\hline
+{\em max\+\_\+val} & 최댓값\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+생성된 무작위 실수 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_aff4ea7a61b3342b59e917bcc7dd08500}\label{utils_8h_aff4ea7a61b3342b59e917bcc7dd08500}} 
+\index{utils.\+h@{utils.\+h}!Rand\+Int@{Rand\+Int}}
+\index{Rand\+Int@{Rand\+Int}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{Rand\+Int()}{RandInt()}}
+{\footnotesize\ttfamily int Rand\+Int (\begin{DoxyParamCaption}\item[{int}]{min\+\_\+val,  }\item[{int}]{max\+\_\+val }\end{DoxyParamCaption})}
+
+
+
+\mbox{[}min\+\_\+val, max\+\_\+val) 사이의 무작위 정수를 리턴 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+\_\+val} & 최솟값 \\
+\hline
+{\em max\+\_\+val} & 최댓값\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+생성된 무작위 정수 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a5cb63b050f48798afe28117861e98271}\label{utils_8h_a5cb63b050f48798afe28117861e98271}} 
+\index{utils.\+h@{utils.\+h}!Rand\+Spawn\+Bullet@{Rand\+Spawn\+Bullet}}
+\index{Rand\+Spawn\+Bullet@{Rand\+Spawn\+Bullet}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{Rand\+Spawn\+Bullet()}{RandSpawnBullet()}}
+{\footnotesize\ttfamily void Rand\+Spawn\+Bullet (\begin{DoxyParamCaption}\item[{\hyperlink{struct_entity}{Entity} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & 랜덤 소환할 총알 \hyperlink{struct_entity}{Entity}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+리턴 값 없음 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{utils_8h_a05b5a24325d46227633053ca49de6234}\label{utils_8h_a05b5a24325d46227633053ca49de6234}} 
+\index{utils.\+h@{utils.\+h}!app@{app}}
+\index{app@{app}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \hyperlink{struct_app}{App} app}
+
+프로그램 전체 단위로 관리하는 전역 객체 모음 \mbox{\Hypertarget{utils_8h_a3969fcbadddf924ee352d7e232919bf5}\label{utils_8h_a3969fcbadddf924ee352d7e232919bf5}} 
+\index{utils.\+h@{utils.\+h}!bullet@{bullet}}
+\index{bullet@{bullet}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{bullet}{bullet}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} bullet\mbox{[}\hyperlink{defs_8h_ac2f0ab514de41108a223c4edd49a6dfb}{N\+U\+M\+\_\+\+B\+U\+L\+L\+E\+TS}\mbox{]}}
+
+총알의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{utils_8h_a30f03aaf13c260e57b759c650c99468e}\label{utils_8h_a30f03aaf13c260e57b759c650c99468e}} 
+\index{utils.\+h@{utils.\+h}!game\+\_\+over@{game\+\_\+over}}
+\index{game\+\_\+over@{game\+\_\+over}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+over}{game\_over}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} game\+\_\+over}
+
+게임오버 화면의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{utils_8h_aa98761129f4d5e69468dcbdddbd88d9d}\label{utils_8h_aa98761129f4d5e69468dcbdddbd88d9d}} 
+\index{utils.\+h@{utils.\+h}!player@{player}}
+\index{player@{player}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \hyperlink{struct_entity}{Entity} player}
+
+주인공의 속성을 설명하는 Entity형 구조체 \mbox{\Hypertarget{utils_8h_aef160b7437d94056f1dc59646cd5b87d}\label{utils_8h_aef160b7437d94056f1dc59646cd5b87d}} 
+\index{utils.\+h@{utils.\+h}!score@{score}}
+\index{score@{score}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int score}
+
+게임 스코어 \mbox{\Hypertarget{utils_8h_afef3fdea043a22bb19f93f3799421010}\label{utils_8h_afef3fdea043a22bb19f93f3799421010}} 
+\index{utils.\+h@{utils.\+h}!score\+\_\+board@{score\+\_\+board}}
+\index{score\+\_\+board@{score\+\_\+board}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{score\+\_\+board}{score\_board}}
+{\footnotesize\ttfamily \hyperlink{struct_text}{Text} score\+\_\+board}
+
+우상단 스코어보드 문자열을 설명하는 Text형 구조체 \mbox{\Hypertarget{utils_8h_ae3c21975ce19d3b28f11d50419e15ab9}\label{utils_8h_ae3c21975ce19d3b28f11d50419e15ab9}} 
+\index{utils.\+h@{utils.\+h}!score\+\_\+text@{score\+\_\+text}}
+\index{score\+\_\+text@{score\+\_\+text}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{score\+\_\+text}{score\_text}}
+{\footnotesize\ttfamily char score\+\_\+text\mbox{[}\hyperlink{defs_8h_aeca034f67218340ecb2261a22c2f3dcd}{B\+U\+F\+S\+I\+ZE}\mbox{]}}
+
+스코어보드에 출력할 문자열 
