@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sdl-example-dodger: Main Page</title>
+<title>sdl-example-dodger: Dodger!</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -43,6 +50,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('index.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,15 +80,43 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">sdl-example-dodger Documentation</div>  </div>
+<div class="title">Dodger! </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>2021학년도 프로그래밍방법론및실습 프로젝트 예제인 총알 피하기 게임이다. SDL2 라이브러리를 이용하여 제작하였으며 SDL2의 기본적인 사용법과 코드 구조를 설명하기 위하여 간단히 제작된 게임이다.</p>
+<h1><a class="anchor" id="main-loop"></a>
+메인루프 구조</h1>
+<p>본 프로그램은 GUI 프로그램으로 <code>main()</code>함수는 무한 루프 안에서 다음 서브루틴을 반복한다. 프로그램은 사용자가 창에 있는 "창닫기 버튼"을 눌러야만 종료된다.</p>
+<ol type="1">
+<li>배경을 모두 지운다 (clear)</li>
+<li>외부 입력(키보드)를 받는다 (input)</li>
+<li>객체들의 다음 상태를 계산한다 (action)</li>
+<li>바뀐 객체들을 화면에 렌더링한다. (draw)</li>
+<li>렌더링한 결과를 화면에 띄운다 (show)</li>
+<li>정해진 시간 동안 대기한다 (delay)</li>
+</ol>
+<div class="fragment"><div class="line"> <span class="keywordflow">for</span> (;;) {</div><div class="line">    <span class="comment">/* (1) 빈 화면 만들기 */</span></div><div class="line">    <a class="code" href="group___draw.html#ga07863ec93360df2f9a1b5eff97890563">ClearWindow</a>();</div><div class="line"></div><div class="line">    <span class="comment">/* (2) 키보드 입력 받기*/</span></div><div class="line">    <a class="code" href="group___input.html#ga842c28d20fb76863eabd0b7bbbce583d">GetInput</a>();</div><div class="line"></div><div class="line">    <span class="comment">/* (3) 메인 로직 수행 후 객체들 화면에 그리기 */</span></div><div class="line">    <span class="keywordflow">if</span> (player.<a class="code" href="struct_entity.html#ae448fb16f537982185a0c5e8db56bdc6">health</a>) {</div><div class="line">        <span class="comment">/* 게임 진행 중일 시 */</span></div><div class="line">        <a class="code" href="group___action.html#ga8738780a1642e9d07f6e89e5e48f647f">LogicGame</a>();</div><div class="line">        <a class="code" href="group___draw.html#gab33f4146ab23c4be91566a68e68895fe">DrawGame</a>();</div><div class="line"></div><div class="line">        <span class="keywordflow">if</span> (tmpcnt++ == <a class="code" href="defs_8h.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a>) {</div><div class="line">            <a class="code" href="group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d">score</a>++;</div><div class="line">            tmpcnt = 0;</div><div class="line">        }</div><div class="line">    } <span class="keywordflow">else</span> {</div><div class="line">        <span class="comment">/* 게임 오버일 시 (게임 오버 화면 출력) */</span></div><div class="line">        <a class="code" href="group___action.html#ga582c79a5f61e7bf0a34e40fd59aa17c2">LogicGameOver</a>();</div><div class="line">        <a class="code" href="group___draw.html#ga52d7bd7319e47472de78cdbf95856b88">DrawGameOver</a>();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">/* (4) 화면 보여주기 */</span></div><div class="line">    <a class="code" href="group___draw.html#ga17ef8abf91a443ec16525f4d95d7836e">ShowWindow</a>();</div><div class="line"></div><div class="line">    <span class="comment">/* 일정 시간 대기 (60FPS 기준 한 프레임에 16ms) */</span></div><div class="line">    SDL_Delay(16);</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="modules"></a>
+모듈 설명</h1>
+<p>본 매뉴얼에는 메인 함수 무한루프에 들어가는 각 서브루틴별로 사용되는 함수를 분리하여 Modules 절에서 설명한다.</p>
+<ul>
+<li><a class="el" href="group___init.html">Init</a> : 무한루프 진입 전 초기화</li>
+<li><a class="el" href="group___input.html">Input</a> : 키보드 입력에 대한 응답</li>
+<li><a class="el" href="group___action.html">Action</a> : 주인공과 총알, 그리고 점수판의 변화를 계산하고 변경</li>
+<li><a class="el" href="group___draw.html">Draw</a> : 실제 오브젝트들을 화면에 보여주기 위한 기능</li>
+<li><a class="el" href="group___utils.html">Utils</a> : 많이 사용하는 기능을 함수로 구현</li>
+</ul>
+<h1><a class="anchor" id="globals"></a>
+전역변수 사용</h1>
+<p>본 프로그램은 간단한 프로그램의 구현을 위해 키 입력과 SDL 창 관련 객체 ( <a class="el" href="group___global_variables.html#ga05b5a24325d46227633053ca49de6234">app</a> ) 주인공 ( <a class="el" href="group___global_variables.html#gaa98761129f4d5e69468dcbdddbd88d9d">player</a> ), 총알 ( <a class="el" href="group___global_variables.html#ga3969fcbadddf924ee352d7e232919bf5">bullet</a> ), 점수판 ( <a class="el" href="group___global_variables.html#gafef3fdea043a22bb19f93f3799421010">score_board</a> ), 점수판에 표시할 텍스트 ( <a class="el" href="group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9">score_text</a> ), 점수 ( <a class="el" href="group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d">score</a> )를 전역변수로 지정하여 사용한다. 각 전역변수 내용에 대한 설명은 <a class="el" href="group___global_variables.html">GlobalVariables</a> 에서 볼 수 있다. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['color',['color',['../struct_text.html#ab0f771bd18d8e968f7aaee4a4e26e385',1,'Text']]]
+  ['color',['color',['../struct_text.html#a631bf4babe4c1825a2cdc0c19c2bd04f',1,'Text']]]
 ];

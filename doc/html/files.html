@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -43,6 +50,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('files.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -64,26 +85,30 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented files with brief descriptions:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="action_8h_source.html"><span class="icondoc"></span></a><a class="el" href="action_8h.html" target="_self">action.h</a></td><td class="desc">키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행하는 함수 선언 </td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="defs_8h_source.html"><span class="icondoc"></span></a><a class="el" href="defs_8h.html" target="_self">defs.h</a></td><td class="desc">데이터타입 및 상수 정의 </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="draw_8c.html" target="_self">draw.c</a></td><td class="desc">텍스쳐 렌더링을 수행하는 함수 정의 </td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="draw_8h_source.html"><span class="icondoc"></span></a><a class="el" href="draw_8h.html" target="_self">draw.h</a></td><td class="desc">텍스쳐 렌더링을 수행하는 함수 선언 </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="init_8c.html" target="_self">init.c</a></td><td class="desc">무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 정의 </td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="init_8h_source.html"><span class="icondoc"></span></a><a class="el" href="init_8h.html" target="_self">init.h</a></td><td class="desc">무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="input_8c.html" target="_self">input.c</a></td><td class="desc">키보드 입력 발생 시 처리하는 함수 정의 </td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="input_8h_source.html"><span class="icondoc"></span></a><a class="el" href="input_8h.html" target="_self">input.h</a></td><td class="desc">키보드 입력 발생 시 처리하는 함수 선언 </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="main_8c.html" target="_self">main.c</a></td><td class="desc">Dodger 게임 main 함수를 정의한 소스 파일 </td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="main_8h_source.html"><span class="icondoc"></span></a><a class="el" href="main_8h.html" target="_self">main.h</a></td><td class="desc">각 모듈 헤더 파일 include 및 전역 변수 선언 </td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="utils_8c.html" target="_self">utils.c</a></td><td class="desc">액션 수행에 필요한 부가적 계산을 수행하는 함수 정의 </td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="utils_8h_source.html"><span class="icondoc"></span></a><a class="el" href="utils_8h.html" target="_self">utils.h</a></td><td class="desc">액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 </td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="action_8c.html" target="_self">action.c</a></td><td class="desc">키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 정의 </td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="action_8h_source.html"><span class="icondoc"></span></a><a class="el" href="action_8h.html" target="_self">action.h</a></td><td class="desc">키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="defs_8h_source.html"><span class="icondoc"></span></a><a class="el" href="defs_8h.html" target="_self">defs.h</a></td><td class="desc">데이터타입 및 상수 정의 </td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="draw_8c.html" target="_self">draw.c</a></td><td class="desc">텍스쳐 렌더링을 수행하는 함수 정의 </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="draw_8h_source.html"><span class="icondoc"></span></a><a class="el" href="draw_8h.html" target="_self">draw.h</a></td><td class="desc">텍스쳐 렌더링을 수행하는 함수 선언 </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="init_8c.html" target="_self">init.c</a></td><td class="desc">무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 정의 </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="init_8h_source.html"><span class="icondoc"></span></a><a class="el" href="init_8h.html" target="_self">init.h</a></td><td class="desc">무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 </td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="input_8c.html" target="_self">input.c</a></td><td class="desc">키보드 입력 발생 시 처리하는 함수 정의 </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="input_8h_source.html"><span class="icondoc"></span></a><a class="el" href="input_8h.html" target="_self">input.h</a></td><td class="desc">키보드 입력 발생 시 처리하는 함수 선언 </td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="main_8c.html" target="_self">main.c</a></td><td class="desc">Dodger 게임 main 함수를 정의한 소스 파일 </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="main_8h_source.html"><span class="icondoc"></span></a><a class="el" href="main_8h.html" target="_self">main.h</a></td><td class="desc">각 모듈 헤더 파일 include 및 전역 변수 선언 </td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="utils_8c.html" target="_self">utils.c</a></td><td class="desc">액션 수행에 필요한 부가적 계산을 수행하는 함수 정의 </td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="utils_8h_source.html"><span class="icondoc"></span></a><a class="el" href="utils_8h.html" target="_self">utils.h</a></td><td class="desc">액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

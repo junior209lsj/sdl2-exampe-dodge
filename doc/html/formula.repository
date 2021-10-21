@@ -1,0 +1,12 @@
+\form#0:$ \pm 18 \circ $
+\form#1:$ \pm 18^{\circ} $
+\form#2:$ (420, 40) $
+\form#3:$ $
+\form#4:$ W $
+\form#5:$ H $
+\form#6:$ ( 0 \ge \frac{1}{8} W ) $
+\form#7:$ ( 0 \le x \le \frac{1}{8} W , 0 \le x \le \frac{1}{8} H) $
+\form#8:$ ( 0 \le x \le \frac{1}{8} W , 0 \le y \le \frac{1}{8} H) $
+\form#9:$ ( \frac{7}{8} W \le x \le W , 0 \le y \le \frac{1}{8} H) $
+\form#10:$ ( 0 \le x \le \frac{1}{8} W , \frac{7}{8} H \le y \le H) $
+\form#11:$ ( \frac{7}{8} W \le x \le W , \frac{7}{8} H \le y \le H) $

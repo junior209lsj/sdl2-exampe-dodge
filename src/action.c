@@ -1,3 +1,9 @@
+/**
+ @file      action.c
+ @brief     키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행
+            (상태를 변경)하는 함수 정의
+ @author    이성재 (seongjae.lee.1118@gmail.com)
+*/
 #include "action.h"
 
 void LogicGame(void) {

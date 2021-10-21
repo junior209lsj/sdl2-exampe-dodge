@@ -8,7 +8,7 @@
 void InitSDL(void) {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         printf("[ERROR] in InitSDL(): %s", SDL_GetError());
-        QuitSDL(1);
+        exit(1);
     }
 
     app.window = SDL_CreateWindow("Dodge!", SDL_WINDOWPOS_UNDEFINED,
@@ -24,7 +24,7 @@ void InitSDL(void) {
 void InitTTF(void) {
     if (TTF_Init() < 0) {
         printf("[ERROR] in InitTTF(): %s", SDL_GetError());
-        QuitSDL(1);
+        exit(1);
     }
 
     app.font = TTF_OpenFont("./ttf/Roboto-Regular.ttf", 20);
@@ -64,7 +64,7 @@ void InitScoreBoard(void) {
     score_board.color.r = 0;
     score_board.color.g = 0;
     score_board.color.b = 0;
-    score_board.color.a = 0;
+    score_board.color.a = 255;
 
     score_board.pos.x = 420;
     score_board.pos.y = 40;
@@ -94,6 +94,4 @@ void InitGameOver(void) {
     game_over.texture = IMG_LoadTexture(app.renderer, "./gfx/GameOver.png");
     game_over.pos.x = 0;
     game_over.pos.y = 0;
-    game_over.pos.w = 0;
-    game_over.pos.h = 0;
 }

@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sdl-example-dodger: Class Members</title>
+<title>sdl-example-dodger: Data Fields</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -43,6 +50,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -58,58 +79,61 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
+<div class="textblock">Here is a list of all documented struct and union fields with links to the struct/union documentation for each field:</div><ul>
 <li>color
-: <a class="el" href="struct_text.html#ab0f771bd18d8e968f7aaee4a4e26e385">Text</a>
+: <a class="el" href="struct_text.html#a631bf4babe4c1825a2cdc0c19c2bd04f">Text</a>
 </li>
 <li>font
-: <a class="el" href="struct_app.html#afe826a1b4b885d5eef35f42108066e3d">App</a>
+: <a class="el" href="struct_app.html#abf5bfa705e66ffc1ddaa6ce46c960873">App</a>
 </li>
 <li>health
-: <a class="el" href="struct_entity.html#ab5bf0c97620636e04b271601e2133884">Entity</a>
+: <a class="el" href="struct_entity.html#ae448fb16f537982185a0c5e8db56bdc6">Entity</a>
 </li>
 <li>key_down
-: <a class="el" href="struct_app.html#a47a178cbe5ce2b26fd1260fc76b25995">App</a>
+: <a class="el" href="struct_app.html#a98550f2222a6d450fc03453bf71b8991">App</a>
 </li>
 <li>key_left
-: <a class="el" href="struct_app.html#a2f9c529290eeb69289873a7d49e2ebfc">App</a>
+: <a class="el" href="struct_app.html#ac10cd65003a356e086d2c9ca76b1a9d1">App</a>
 </li>
 <li>key_r
-: <a class="el" href="struct_app.html#ae8b7c1b6409e8a776a2b2b90c0d8021f">App</a>
+: <a class="el" href="struct_app.html#aceb96cadd2804e1589e11192886e0043">App</a>
 </li>
 <li>key_right
-: <a class="el" href="struct_app.html#a6b10c97c283cfd0237190656dea1e595">App</a>
+: <a class="el" href="struct_app.html#af929151dd14c88998cfe0eb78d0dc0a3">App</a>
 </li>
 <li>key_up
-: <a class="el" href="struct_app.html#a364051bafd0efb5b1daa089fc134c1f5">App</a>
+: <a class="el" href="struct_app.html#a1c650232521010da69bb82f93ebcd495">App</a>
 </li>
 <li>pos
-: <a class="el" href="struct_entity.html#a6d76b33d9bd8ca3323e8d62dfac72481">Entity</a>
-, <a class="el" href="struct_text.html#a00f108cce0b669d2d7f6c8d5ac16e4d0">Text</a>
+: <a class="el" href="struct_entity.html#a294c5492db3ece725b68947cafdaafec">Entity</a>
+, <a class="el" href="struct_text.html#a294c5492db3ece725b68947cafdaafec">Text</a>
 </li>
 <li>renderer
-: <a class="el" href="struct_app.html#a4ad29ac304e4ece3ddf9f275fb30f29d">App</a>
+: <a class="el" href="struct_app.html#a966da7a60c4ea3ba301e26ccc5efe452">App</a>
 </li>
 <li>surface
-: <a class="el" href="struct_text.html#a881e261364e0678ddcf6865bf9d668b9">Text</a>
+: <a class="el" href="struct_text.html#a2f5cac12e913bcfcff660305bf88dd3b">Text</a>
 </li>
 <li>texture
-: <a class="el" href="struct_entity.html#a7e3a5bd3ee8f06d2641b183b4ea87933">Entity</a>
-, <a class="el" href="struct_text.html#aea2a82ef1d8b4d448b6b3e524bce2cc2">Text</a>
+: <a class="el" href="struct_entity.html#a859b8efbf9abe8e82757ee5c75a0c97c">Entity</a>
+, <a class="el" href="struct_text.html#a859b8efbf9abe8e82757ee5c75a0c97c">Text</a>
 </li>
 <li>theta
-: <a class="el" href="struct_entity.html#a2e774bbee1f449ee3bfacd06880c1566">Entity</a>
+: <a class="el" href="struct_entity.html#aca81c35c21e3a5f7f3a8d24504e76664">Entity</a>
 </li>
 <li>window
-: <a class="el" href="struct_app.html#a47d24f96ee9543f2a5f444918347b76b">App</a>
+: <a class="el" href="struct_app.html#aaa8e409e04dcf575ef63fd5fb3db06f9">App</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

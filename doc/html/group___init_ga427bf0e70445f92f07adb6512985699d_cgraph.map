@@ -1,0 +1,4 @@
+<map id="InitSDL" name="InitSDL">
+<area shape="rect" id="node2" href="$group___init.html#gaa2128129f94d9519cfc62de7e308bac7" title="프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료 " alt="" coords="120,5,192,32"/>
+<area shape="rect" id="node3" href="$group___init.html#ga6ba0c53f3cc9980ebe30a2286632bb45" title="연 폰트 파일을 닫고 TTF 엔진 종료 " alt="" coords="240,5,311,32"/>
+</map>

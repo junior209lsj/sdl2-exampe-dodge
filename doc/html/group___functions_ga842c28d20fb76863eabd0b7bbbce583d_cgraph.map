@@ -1,0 +1,6 @@
+<map id="GetInput" name="GetInput">
+<area shape="rect" id="node2" href="$init_8c.html#aa2128129f94d9519cfc62de7e308bac7" title="프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료 " alt="" coords="159,5,231,32"/>
+<area shape="rect" id="node4" href="$group___functions.html#ga760f3d944fc0e0a2c9636d785cd07ca8" title="키보드를 뗐을 때 상태를 기록한다. " alt="" coords="134,56,255,83"/>
+<area shape="rect" id="node5" href="$group___functions.html#ga1b8817382ef71218b5c24982e9320b8a" title="키보드를 눌렀을 때 상태를 기록한다. " alt="" coords="125,107,264,133"/>
+<area shape="rect" id="node3" href="$init_8c.html#a6ba0c53f3cc9980ebe30a2286632bb45" title="연 폰트 파일을 닫고 TTF 엔진 종료 " alt="" coords="312,5,383,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="DrawGame" name="DrawGame">
+<area shape="rect" id="node2" href="$group___draw.html#ga303fcf31d5f32fbaa70040fa5848ff04" title="Entity 구조체 렌더링 " alt="" coords="158,5,257,32"/>
+<area shape="rect" id="node3" href="$group___draw.html#ga0e4dc5510d16de6f635e3229e999bddc" title="Text 구조체 렌더링 (스코어보드) " alt="" coords="141,56,273,83"/>
+</map>

@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -42,6 +49,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('draw_8c.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,7 +78,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -81,173 +102,38 @@ Include dependency graph for draw.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a07863ec93360df2f9a1b5eff97890563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a07863ec93360df2f9a1b5eff97890563">ClearWindow</a> (void)</td></tr>
-<tr class="memdesc:a07863ec93360df2f9a1b5eff97890563"><td class="mdescLeft">&#160;</td><td class="mdescRight">배경을 흰색으로 지정하고 화면에 렌더링된 모든 요소 제거  <a href="#a07863ec93360df2f9a1b5eff97890563">More...</a><br /></td></tr>
-<tr class="separator:a07863ec93360df2f9a1b5eff97890563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ef8abf91a443ec16525f4d95d7836e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a17ef8abf91a443ec16525f4d95d7836e">ShowWindow</a> (void)</td></tr>
-<tr class="memdesc:a17ef8abf91a443ec16525f4d95d7836e"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 렌더링 결과 표시(보여주기)  <a href="#a17ef8abf91a443ec16525f4d95d7836e">More...</a><br /></td></tr>
-<tr class="separator:a17ef8abf91a443ec16525f4d95d7836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab33f4146ab23c4be91566a68e68895fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#ab33f4146ab23c4be91566a68e68895fe">DrawGame</a> (void)</td></tr>
-<tr class="memdesc:ab33f4146ab23c4be91566a68e68895fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 진행 상태에서 주인공, 총알, 스코어보드 렌더링  <a href="#ab33f4146ab23c4be91566a68e68895fe">More...</a><br /></td></tr>
-<tr class="separator:ab33f4146ab23c4be91566a68e68895fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52d7bd7319e47472de78cdbf95856b88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a52d7bd7319e47472de78cdbf95856b88">DrawGameOver</a> (void)</td></tr>
-<tr class="memdesc:a52d7bd7319e47472de78cdbf95856b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 오버 상태에서 게임 오버 화면, 최종 스코어 렌더링  <a href="#a52d7bd7319e47472de78cdbf95856b88">More...</a><br /></td></tr>
-<tr class="separator:a52d7bd7319e47472de78cdbf95856b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a303fcf31d5f32fbaa70040fa5848ff04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a303fcf31d5f32fbaa70040fa5848ff04">RenderEntity</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
-<tr class="memdesc:a303fcf31d5f32fbaa70040fa5848ff04"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체 렌더링  <a href="#a303fcf31d5f32fbaa70040fa5848ff04">More...</a><br /></td></tr>
-<tr class="separator:a303fcf31d5f32fbaa70040fa5848ff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4dc5510d16de6f635e3229e999bddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a0e4dc5510d16de6f635e3229e999bddc">RenderScoreBoard</a> (<a class="el" href="struct_text.html">Text</a> *object)</td></tr>
-<tr class="memdesc:a0e4dc5510d16de6f635e3229e999bddc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_text.html" title="Text: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) ">Text</a> 구조체 렌더링 (스코어보드)  <a href="#a0e4dc5510d16de6f635e3229e999bddc">More...</a><br /></td></tr>
-<tr class="separator:a0e4dc5510d16de6f635e3229e999bddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07863ec93360df2f9a1b5eff97890563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#ga07863ec93360df2f9a1b5eff97890563">ClearWindow</a> (void)</td></tr>
+<tr class="memdesc:ga07863ec93360df2f9a1b5eff97890563"><td class="mdescLeft">&#160;</td><td class="mdescRight">배경을 흰색으로 지정하고 화면에 렌더링된 모든 요소 제거  <a href="group___draw.html#ga07863ec93360df2f9a1b5eff97890563">More...</a><br /></td></tr>
+<tr class="separator:ga07863ec93360df2f9a1b5eff97890563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17ef8abf91a443ec16525f4d95d7836e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#ga17ef8abf91a443ec16525f4d95d7836e">ShowWindow</a> (void)</td></tr>
+<tr class="memdesc:ga17ef8abf91a443ec16525f4d95d7836e"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 렌더링 결과 표시(보여주기)  <a href="group___draw.html#ga17ef8abf91a443ec16525f4d95d7836e">More...</a><br /></td></tr>
+<tr class="separator:ga17ef8abf91a443ec16525f4d95d7836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab33f4146ab23c4be91566a68e68895fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#gab33f4146ab23c4be91566a68e68895fe">DrawGame</a> (void)</td></tr>
+<tr class="memdesc:gab33f4146ab23c4be91566a68e68895fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 진행 상태에서 주인공, 총알, 스코어보드 렌더링  <a href="group___draw.html#gab33f4146ab23c4be91566a68e68895fe">More...</a><br /></td></tr>
+<tr class="separator:gab33f4146ab23c4be91566a68e68895fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52d7bd7319e47472de78cdbf95856b88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#ga52d7bd7319e47472de78cdbf95856b88">DrawGameOver</a> (void)</td></tr>
+<tr class="memdesc:ga52d7bd7319e47472de78cdbf95856b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 오버 상태에서 게임 오버 화면, 최종 스코어 렌더링  <a href="group___draw.html#ga52d7bd7319e47472de78cdbf95856b88">More...</a><br /></td></tr>
+<tr class="separator:ga52d7bd7319e47472de78cdbf95856b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga303fcf31d5f32fbaa70040fa5848ff04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#ga303fcf31d5f32fbaa70040fa5848ff04">RenderEntity</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
+<tr class="memdesc:ga303fcf31d5f32fbaa70040fa5848ff04"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체 렌더링  <a href="group___draw.html#ga303fcf31d5f32fbaa70040fa5848ff04">More...</a><br /></td></tr>
+<tr class="separator:ga303fcf31d5f32fbaa70040fa5848ff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e4dc5510d16de6f635e3229e999bddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___draw.html#ga0e4dc5510d16de6f635e3229e999bddc">RenderScoreBoard</a> (<a class="el" href="struct_text.html">Text</a> *object)</td></tr>
+<tr class="memdesc:ga0e4dc5510d16de6f635e3229e999bddc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_text.html" title="Text: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) ">Text</a> 구조체 렌더링 (스코어보드)  <a href="group___draw.html#ga0e4dc5510d16de6f635e3229e999bddc">More...</a><br /></td></tr>
+<tr class="separator:ga0e4dc5510d16de6f635e3229e999bddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>텍스쳐 렌더링을 수행하는 함수 정의 </p>
 <dl class="section author"><dt>Author</dt><dd>이성재 (<a href="#" onclick="location.href='mai'+'lto:'+'seo'+'ng'+'jae'+'.l'+'ee.'+'11'+'18@'+'gm'+'ail'+'.c'+'om'; return false;">seong<span style="display: none;">.nosp@m.</span>jae.<span style="display: none;">.nosp@m.</span>lee.1<span style="display: none;">.nosp@m.</span>118@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a07863ec93360df2f9a1b5eff97890563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07863ec93360df2f9a1b5eff97890563">&#9670;&nbsp;</a></span>ClearWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearWindow </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>배경을 흰색으로 지정하고 화면에 렌더링된 모든 요소 제거 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="ab33f4146ab23c4be91566a68e68895fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab33f4146ab23c4be91566a68e68895fe">&#9670;&nbsp;</a></span>DrawGame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrawGame </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>게임 진행 상태에서 주인공, 총알, 스코어보드 렌더링 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a52d7bd7319e47472de78cdbf95856b88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52d7bd7319e47472de78cdbf95856b88">&#9670;&nbsp;</a></span>DrawGameOver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrawGameOver </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>게임 오버 상태에서 게임 오버 화면, 최종 스코어 렌더링 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a303fcf31d5f32fbaa70040fa5848ff04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a303fcf31d5f32fbaa70040fa5848ff04">&#9670;&nbsp;</a></span>RenderEntity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RenderEntity </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체 렌더링 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">object</td><td>렌더링 대상 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a0e4dc5510d16de6f635e3229e999bddc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e4dc5510d16de6f635e3229e999bddc">&#9670;&nbsp;</a></span>RenderScoreBoard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RenderScoreBoard </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_text.html">Text</a> *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="struct_text.html" title="Text: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) ">Text</a> 구조체 렌더링 (스코어보드) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">object</td><td>렌더링 대상 <a class="el" href="struct_text.html" title="Text: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) ">Text</a> 구조체</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a17ef8abf91a443ec16525f4d95d7836e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17ef8abf91a443ec16525f4d95d7836e">&#9670;&nbsp;</a></span>ShowWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShowWindow </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>화면에 렌더링 결과 표시(보여주기) </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="draw_8c.html">draw.c</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

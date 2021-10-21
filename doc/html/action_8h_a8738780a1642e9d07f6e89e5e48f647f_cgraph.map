@@ -1,0 +1,11 @@
+<map id="LogicGame" name="LogicGame">
+<area shape="rect" id="node2" href="$action_8c.html#ad1c341bd8d66cfa6307f9eda7fcb517f" title="키보드 입력 상태에 따라 주인공의 액션을 수행. 누른 화살표 버튼에 따라 움직이고, 화면 밖으로 나갈 수 �..." alt="" coords="159,5,238,32"/>
+<area shape="rect" id="node4" href="$action_8c.html#a94b64a686b9deac756fc84a1f21d182a" title="총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고, 화면 밖으로 나가면 리스폰됨. " alt="" coords="161,56,236,83"/>
+<area shape="rect" id="node8" href="$action_8c.html#a7d7e08b4f43179e1c112660ebf499f38" title="스코어보드 문자열 생성 (전역변수 score에 따라 현재 점수 표시) " alt="" coords="143,107,254,133"/>
+<area shape="rect" id="node9" href="$action_8c.html#a95ce7534309c25f41e7f6c95a84526fe" title="총알과 주인공의 충돌 여부를 계산하고 충돌 시 게임 오버시킴 " alt="" coords="141,157,256,184"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a53db3177844e1195be84da6b045d19cb" title="주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인 " alt="" coords="313,5,449,32"/>
+<area shape="rect" id="node5" href="$utils_8c.html#a5cb63b050f48798afe28117861e98271" title="좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산 " alt="" coords="318,56,445,83"/>
+<area shape="rect" id="node6" href="$utils_8c.html#aff4ea7a61b3342b59e917bcc7dd08500" title="[min_val, max_val) 사이의 무작위 정수를 리턴 " alt="" coords="520,31,588,57"/>
+<area shape="rect" id="node7" href="$utils_8c.html#a87d33d8b54bca3955ef58a77d52995eb" title="[min_val, max_val) 사이의 무작위 실수를 리턴 " alt="" coords="507,81,601,108"/>
+<area shape="rect" id="node10" href="$utils_8c.html#ad09f6116d9d2c9a447bff3c40b69d29a" title="두 Entity 간 충돌 여부를 판단 " alt="" coords="304,157,459,184"/>
+</map>

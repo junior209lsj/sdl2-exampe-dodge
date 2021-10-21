@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -42,6 +49,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_text.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,11 +78,9 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_text-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">Text Struct Reference</div>  </div>
 </div><!--header-->
@@ -72,27 +92,27 @@ $(function() {
 <p><code>#include &lt;<a class="el" href="defs_8h_source.html">defs.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a00f108cce0b669d2d7f6c8d5ac16e4d0"><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a00f108cce0b669d2d7f6c8d5ac16e4d0">pos</a></td></tr>
-<tr class="separator:a00f108cce0b669d2d7f6c8d5ac16e4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0f771bd18d8e968f7aaee4a4e26e385"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#ab0f771bd18d8e968f7aaee4a4e26e385">color</a></td></tr>
-<tr class="separator:ab0f771bd18d8e968f7aaee4a4e26e385"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881e261364e0678ddcf6865bf9d668b9"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a881e261364e0678ddcf6865bf9d668b9">surface</a></td></tr>
-<tr class="separator:a881e261364e0678ddcf6865bf9d668b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2a82ef1d8b4d448b6b3e524bce2cc2"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#aea2a82ef1d8b4d448b6b3e524bce2cc2">texture</a></td></tr>
-<tr class="separator:aea2a82ef1d8b4d448b6b3e524bce2cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a294c5492db3ece725b68947cafdaafec"><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a294c5492db3ece725b68947cafdaafec">pos</a></td></tr>
+<tr class="separator:a294c5492db3ece725b68947cafdaafec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631bf4babe4c1825a2cdc0c19c2bd04f"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a631bf4babe4c1825a2cdc0c19c2bd04f">color</a></td></tr>
+<tr class="separator:a631bf4babe4c1825a2cdc0c19c2bd04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5cac12e913bcfcff660305bf88dd3b"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a2f5cac12e913bcfcff660305bf88dd3b">surface</a></td></tr>
+<tr class="separator:a2f5cac12e913bcfcff660305bf88dd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859b8efbf9abe8e82757ee5c75a0c97c"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_text.html#a859b8efbf9abe8e82757ee5c75a0c97c">texture</a></td></tr>
+<tr class="separator:a859b8efbf9abe8e82757ee5c75a0c97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="struct_text.html" title="Text: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) ">Text</a>: 게임 내에 문자열을 표시할 경우 문자열을 나타내는 구조체(스코어보드) </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab0f771bd18d8e968f7aaee4a4e26e385"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0f771bd18d8e968f7aaee4a4e26e385">&#9670;&nbsp;</a></span>color</h2>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a631bf4babe4c1825a2cdc0c19c2bd04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631bf4babe4c1825a2cdc0c19c2bd04f">&#9670;&nbsp;</a></span>color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Color Text::color</td>
+          <td class="memname">SDL_Color color</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -100,14 +120,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a00f108cce0b669d2d7f6c8d5ac16e4d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f108cce0b669d2d7f6c8d5ac16e4d0">&#9670;&nbsp;</a></span>pos</h2>
+<a id="a294c5492db3ece725b68947cafdaafec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294c5492db3ece725b68947cafdaafec">&#9670;&nbsp;</a></span>pos</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Rect Text::pos</td>
+          <td class="memname">SDL_Rect pos</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -115,14 +135,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a881e261364e0678ddcf6865bf9d668b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a881e261364e0678ddcf6865bf9d668b9">&#9670;&nbsp;</a></span>surface</h2>
+<a id="a2f5cac12e913bcfcff660305bf88dd3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5cac12e913bcfcff660305bf88dd3b">&#9670;&nbsp;</a></span>surface</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Surface* Text::surface</td>
+          <td class="memname">SDL_Surface* surface</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -130,14 +150,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aea2a82ef1d8b4d448b6b3e524bce2cc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2a82ef1d8b4d448b6b3e524bce2cc2">&#9670;&nbsp;</a></span>texture</h2>
+<a id="a859b8efbf9abe8e82757ee5c75a0c97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859b8efbf9abe8e82757ee5c75a0c97c">&#9670;&nbsp;</a></span>texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Texture* Text::texture</td>
+          <td class="memname">SDL_Texture* texture</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,11 +169,15 @@ Public Attributes</h2></td></tr>
 <li><a class="el" href="defs_8h_source.html">defs.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_text.html">Text</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

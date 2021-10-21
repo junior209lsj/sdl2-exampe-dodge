@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -42,6 +49,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('utils_8c.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,7 +78,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -80,200 +101,35 @@ Include dependency graph for utils.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a53db3177844e1195be84da6b045d19cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a53db3177844e1195be84da6b045d19cb">CheckCollisionWall</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
-<tr class="memdesc:a53db3177844e1195be84da6b045d19cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인  <a href="#a53db3177844e1195be84da6b045d19cb">More...</a><br /></td></tr>
-<tr class="separator:a53db3177844e1195be84da6b045d19cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad09f6116d9d2c9a447bff3c40b69d29a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ad09f6116d9d2c9a447bff3c40b69d29a">CheckCollisionObjects</a> (<a class="el" href="struct_entity.html">Entity</a> *object_a, <a class="el" href="struct_entity.html">Entity</a> *object_b)</td></tr>
-<tr class="memdesc:ad09f6116d9d2c9a447bff3c40b69d29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">두 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 간 충돌 여부를 판단  <a href="#ad09f6116d9d2c9a447bff3c40b69d29a">More...</a><br /></td></tr>
-<tr class="separator:ad09f6116d9d2c9a447bff3c40b69d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb63b050f48798afe28117861e98271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a5cb63b050f48798afe28117861e98271">RandSpawnBullet</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
-<tr class="memdesc:a5cb63b050f48798afe28117861e98271"><td class="mdescLeft">&#160;</td><td class="mdescRight">좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산  <a href="#a5cb63b050f48798afe28117861e98271">More...</a><br /></td></tr>
-<tr class="separator:a5cb63b050f48798afe28117861e98271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4ea7a61b3342b59e917bcc7dd08500"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#aff4ea7a61b3342b59e917bcc7dd08500">RandInt</a> (int min_val, int max_val)</td></tr>
-<tr class="memdesc:aff4ea7a61b3342b59e917bcc7dd08500"><td class="mdescLeft">&#160;</td><td class="mdescRight">[min_val, max_val) 사이의 무작위 정수를 리턴  <a href="#aff4ea7a61b3342b59e917bcc7dd08500">More...</a><br /></td></tr>
-<tr class="separator:aff4ea7a61b3342b59e917bcc7dd08500"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d33d8b54bca3955ef58a77d52995eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a87d33d8b54bca3955ef58a77d52995eb">RandDouble</a> (double min_val, double max_val)</td></tr>
-<tr class="memdesc:a87d33d8b54bca3955ef58a77d52995eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">[min_val, max_val) 사이의 무작위 실수를 리턴  <a href="#a87d33d8b54bca3955ef58a77d52995eb">More...</a><br /></td></tr>
-<tr class="separator:a87d33d8b54bca3955ef58a77d52995eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53db3177844e1195be84da6b045d19cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#ga53db3177844e1195be84da6b045d19cb">CheckCollisionWall</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
+<tr class="memdesc:ga53db3177844e1195be84da6b045d19cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인  <a href="group___utils.html#ga53db3177844e1195be84da6b045d19cb">More...</a><br /></td></tr>
+<tr class="separator:ga53db3177844e1195be84da6b045d19cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#gad09f6116d9d2c9a447bff3c40b69d29a">CheckCollisionObjects</a> (<a class="el" href="struct_entity.html">Entity</a> *object_a, <a class="el" href="struct_entity.html">Entity</a> *object_b)</td></tr>
+<tr class="memdesc:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">두 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 간 충돌 여부를 판단  <a href="group___utils.html#gad09f6116d9d2c9a447bff3c40b69d29a">More...</a><br /></td></tr>
+<tr class="separator:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5cb63b050f48798afe28117861e98271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#ga5cb63b050f48798afe28117861e98271">RandSpawnBullet</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
+<tr class="memdesc:ga5cb63b050f48798afe28117861e98271"><td class="mdescLeft">&#160;</td><td class="mdescRight">좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산  <a href="group___utils.html#ga5cb63b050f48798afe28117861e98271">More...</a><br /></td></tr>
+<tr class="separator:ga5cb63b050f48798afe28117861e98271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff4ea7a61b3342b59e917bcc7dd08500"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#gaff4ea7a61b3342b59e917bcc7dd08500">RandInt</a> (int min_val, int max_val)</td></tr>
+<tr class="memdesc:gaff4ea7a61b3342b59e917bcc7dd08500"><td class="mdescLeft">&#160;</td><td class="mdescRight">[min_val, max_val) 사이의 무작위 정수를 리턴  <a href="group___utils.html#gaff4ea7a61b3342b59e917bcc7dd08500">More...</a><br /></td></tr>
+<tr class="separator:gaff4ea7a61b3342b59e917bcc7dd08500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d33d8b54bca3955ef58a77d52995eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#ga87d33d8b54bca3955ef58a77d52995eb">RandDouble</a> (double min_val, double max_val)</td></tr>
+<tr class="memdesc:ga87d33d8b54bca3955ef58a77d52995eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">[min_val, max_val) 사이의 무작위 실수를 리턴  <a href="group___utils.html#ga87d33d8b54bca3955ef58a77d52995eb">More...</a><br /></td></tr>
+<tr class="separator:ga87d33d8b54bca3955ef58a77d52995eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>액션 수행에 필요한 부가적 계산을 수행하는 함수 정의 </p>
 <dl class="section author"><dt>Author</dt><dd>이성재 (<a href="#" onclick="location.href='mai'+'lto:'+'seo'+'ng'+'jae'+'.l'+'ee.'+'11'+'18@'+'gm'+'ail'+'.c'+'om'; return false;">seong<span style="display: none;">.nosp@m.</span>jae.<span style="display: none;">.nosp@m.</span>lee.1<span style="display: none;">.nosp@m.</span>118@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ad09f6116d9d2c9a447bff3c40b69d29a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad09f6116d9d2c9a447bff3c40b69d29a">&#9670;&nbsp;</a></span>CheckCollisionObjects()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int CheckCollisionObjects </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
-          <td class="paramname"><em>object_a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
-          <td class="paramname"><em>object_b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>두 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 간 충돌 여부를 판단 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">object_a</td><td>충돌 여부를 판단할 첫 번째 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체 </td></tr>
-    <tr><td class="paramname">object_b</td><td>충돌 여부를 판단할 두 번째 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 구조체</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>충돌했으면 1, 충돌하지 않았으면 0 </dd></dl>
-
-</div>
-</div>
-<a id="a53db3177844e1195be84da6b045d19cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53db3177844e1195be84da6b045d19cb">&#9670;&nbsp;</a></span>CheckCollisionWall()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int CheckCollisionWall </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">object</td><td>탐지 대상 Entity형 구조체</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>벽 밖으로 넘어가면 1, 벽 안에 있으면 0 </dd></dl>
-
-</div>
-</div>
-<a id="a87d33d8b54bca3955ef58a77d52995eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87d33d8b54bca3955ef58a77d52995eb">&#9670;&nbsp;</a></span>RandDouble()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double RandDouble </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>min_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>max_val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>[min_val, max_val) 사이의 무작위 실수를 리턴 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">min_val</td><td>최솟값 </td></tr>
-    <tr><td class="paramname">max_val</td><td>최댓값</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>생성된 무작위 실수 </dd></dl>
-
-</div>
-</div>
-<a id="aff4ea7a61b3342b59e917bcc7dd08500"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff4ea7a61b3342b59e917bcc7dd08500">&#9670;&nbsp;</a></span>RandInt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RandInt </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>max_val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>[min_val, max_val) 사이의 무작위 정수를 리턴 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">min_val</td><td>최솟값 </td></tr>
-    <tr><td class="paramname">max_val</td><td>최댓값</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>생성된 무작위 정수 </dd></dl>
-
-</div>
-</div>
-<a id="a5cb63b050f48798afe28117861e98271"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb63b050f48798afe28117861e98271">&#9670;&nbsp;</a></span>RandSpawnBullet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RandSpawnBullet </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">object</td><td>랜덤 소환할 총알 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="utils_8c.html">utils.c</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

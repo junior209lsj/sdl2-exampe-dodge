@@ -1,0 +1,4 @@
+<map id="DrawGameOver" name="DrawGameOver">
+<area shape="rect" id="node2" href="$draw_8c.html#a303fcf31d5f32fbaa70040fa5848ff04" title="Entity 구조체 렌더링 " alt="" coords="186,5,285,32"/>
+<area shape="rect" id="node3" href="$draw_8c.html#a0e4dc5510d16de6f635e3229e999bddc" title="Text 구조체 렌더링 (스코어보드) " alt="" coords="169,56,301,83"/>
+</map>

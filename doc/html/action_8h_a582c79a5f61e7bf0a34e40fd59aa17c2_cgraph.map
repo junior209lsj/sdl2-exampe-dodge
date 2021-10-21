@@ -1,0 +1,11 @@
+<map id="LogicGameOver" name="LogicGameOver">
+<area shape="rect" id="node2" href="$action_8c.html#aa65db23b8a8d08fdab84f41d2d77fc16" title="게임 오버 시 최종 스코어 문자열 생성 (전역변수 score에 따라 최종 점수 표시) " alt="" coords="169,31,308,57"/>
+<area shape="rect" id="node3" href="$action_8c.html#a981d44fa9ea88e54c20d6a74c037277d" title="게임 오버 화면의 액션 수행. 아무 것도 수행하지 않다가, R키를 누르면 모든 구조체 초기화 ..." alt="" coords="186,81,291,108"/>
+<area shape="rect" id="node4" href="$init_8c.html#a068fc32638e272bb7c61516d6efe4b9e" title="플레이어 초기화 (텍스쳐 불러오기, 위치 설정, 체력 1로 설정) " alt="" coords="371,5,449,32"/>
+<area shape="rect" id="node5" href="$init_8c.html#a30c1a22616a4bc3d87ab7197913e62d6" title="총알 초기화 (텍스쳐 불러오기, 랜덤 위치에 소환, 총알&#45;주인공 간 각도계산) " alt="" coords="373,56,447,83"/>
+<area shape="rect" id="node9" href="$init_8c.html#ab233da79a00de5b6a0752c031b1f9855" title="스코어보드 초기화(글씨 색깔, 위치) " alt="" coords="356,107,464,133"/>
+<area shape="rect" id="node10" href="$init_8c.html#ac20fccf3f37ac898a607e7ca2aae7081" title="게임오버 화면 초기화 (텍스쳐, 위치) " alt="" coords="359,157,461,184"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a5cb63b050f48798afe28117861e98271" title="좌상, 좌하, 우상, 우하단 중 랜덤한 위치에 총알 소환 후 주인공과의 각도 계산 " alt="" coords="512,56,639,83"/>
+<area shape="rect" id="node7" href="$utils_8c.html#aff4ea7a61b3342b59e917bcc7dd08500" title="[min_val, max_val) 사이의 무작위 정수를 리턴 " alt="" coords="700,31,768,57"/>
+<area shape="rect" id="node8" href="$utils_8c.html#a87d33d8b54bca3955ef58a77d52995eb" title="[min_val, max_val) 사이의 무작위 실수를 리턴 " alt="" coords="687,81,781,108"/>
+</map>

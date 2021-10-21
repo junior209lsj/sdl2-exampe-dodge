@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -42,6 +49,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('init_8h.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,7 +78,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a> &#124;
@@ -84,12 +105,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="init_8h__dep__incl.png" border="0" usemap="#init_8hdep" alt=""/></div>
 <map name="init_8hdep" id="init_8hdep">
-<area shape="rect" id="node2" href="action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행하는 함수 선언 " alt="" coords="5,80,73,107"/>
-<area shape="rect" id="node3" href="main_8h.html" title="각 모듈 헤더 파일 include 및 전역 변수 선언 " alt="" coords="81,155,142,181"/>
-<area shape="rect" id="node5" href="init_8c.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 정의 " alt="" coords="149,80,199,107"/>
-<area shape="rect" id="node6" href="input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="223,80,285,107"/>
-<area shape="rect" id="node4" href="main_8c.html" title="dodger 게임 main 함수를 정의한 소스 파일 " alt="" coords="81,229,142,256"/>
-<area shape="rect" id="node7" href="input_8c.html" title="키보드 입력 발생 시 처리하는 함수 정의 " alt="" coords="223,155,285,181"/>
+<area shape="rect" id="node2" href="action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="13,80,81,107"/>
+<area shape="rect" id="node4" href="main_8h.html" title="각 모듈 헤더 파일 include 및 전역 변수 선언 " alt="" coords="98,155,159,181"/>
+<area shape="rect" id="node6" href="init_8c.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 정의 " alt="" coords="157,80,207,107"/>
+<area shape="rect" id="node7" href="input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="231,80,293,107"/>
+<area shape="rect" id="node3" href="action_8c.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 정의 ..." alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node5" href="main_8c.html" title="dodger 게임 main 함수를 정의한 소스 파일 " alt="" coords="98,229,159,256"/>
+<area shape="rect" id="node8" href="input_8c.html" title="키보드 입력 발생 시 처리하는 함수 정의 " alt="" coords="231,155,293,181"/>
 </map>
 </div>
 </div>
@@ -97,362 +119,64 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a427bf0e70445f92f07adb6512985699d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a427bf0e70445f92f07adb6512985699d">InitSDL</a> (void)</td></tr>
-<tr class="memdesc:a427bf0e70445f92f07adb6512985699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">프로그램 수행에 필요한 초기화 과정 수행  <a href="#a427bf0e70445f92f07adb6512985699d">More...</a><br /></td></tr>
-<tr class="separator:a427bf0e70445f92f07adb6512985699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82fb88870e950b4d0b484e2744d6b064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a82fb88870e950b4d0b484e2744d6b064">InitTTF</a> (void)</td></tr>
-<tr class="memdesc:a82fb88870e950b4d0b484e2744d6b064"><td class="mdescLeft">&#160;</td><td class="mdescRight">TTF폰트 사용을 위한 초기화 과정 수행  <a href="#a82fb88870e950b4d0b484e2744d6b064">More...</a><br /></td></tr>
-<tr class="separator:a82fb88870e950b4d0b484e2744d6b064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2128129f94d9519cfc62de7e308bac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#aa2128129f94d9519cfc62de7e308bac7">QuitSDL</a> (int flag)</td></tr>
-<tr class="memdesc:aa2128129f94d9519cfc62de7e308bac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료  <a href="#aa2128129f94d9519cfc62de7e308bac7">More...</a><br /></td></tr>
-<tr class="separator:aa2128129f94d9519cfc62de7e308bac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba0c53f3cc9980ebe30a2286632bb45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a6ba0c53f3cc9980ebe30a2286632bb45">QuitTTF</a> (void)</td></tr>
-<tr class="memdesc:a6ba0c53f3cc9980ebe30a2286632bb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">연 폰트 파일을 닫고 TTF 엔진 종료  <a href="#a6ba0c53f3cc9980ebe30a2286632bb45">More...</a><br /></td></tr>
-<tr class="separator:a6ba0c53f3cc9980ebe30a2286632bb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a0a26d5779d3a2a2c898c3f52b74ddf3a">InitMemorySet</a> (void)</td></tr>
-<tr class="memdesc:a0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">모든 전역 변수의 메모리 내용 0으로 초기화  <a href="#a0a26d5779d3a2a2c898c3f52b74ddf3a">More...</a><br /></td></tr>
-<tr class="separator:a0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab233da79a00de5b6a0752c031b1f9855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#ab233da79a00de5b6a0752c031b1f9855">InitScoreBoard</a> (void)</td></tr>
-<tr class="memdesc:ab233da79a00de5b6a0752c031b1f9855"><td class="mdescLeft">&#160;</td><td class="mdescRight">스코어보드 초기화(글씨 색깔, 위치)  <a href="#ab233da79a00de5b6a0752c031b1f9855">More...</a><br /></td></tr>
-<tr class="separator:ab233da79a00de5b6a0752c031b1f9855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068fc32638e272bb7c61516d6efe4b9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a068fc32638e272bb7c61516d6efe4b9e">InitPlayer</a> (void)</td></tr>
-<tr class="memdesc:a068fc32638e272bb7c61516d6efe4b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 초기화 (텍스쳐 불러오기, 위치 설정, 체력 1로 설정)  <a href="#a068fc32638e272bb7c61516d6efe4b9e">More...</a><br /></td></tr>
-<tr class="separator:a068fc32638e272bb7c61516d6efe4b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c1a22616a4bc3d87ab7197913e62d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a30c1a22616a4bc3d87ab7197913e62d6">InitBullet</a> (void)</td></tr>
-<tr class="memdesc:a30c1a22616a4bc3d87ab7197913e62d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">총알 초기화 (텍스쳐 불러오기, 랜덤 위치에 소환, 총알-주인공 간 각도계산)  <a href="#a30c1a22616a4bc3d87ab7197913e62d6">More...</a><br /></td></tr>
-<tr class="separator:a30c1a22616a4bc3d87ab7197913e62d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac20fccf3f37ac898a607e7ca2aae7081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#ac20fccf3f37ac898a607e7ca2aae7081">InitGameOver</a> (void)</td></tr>
-<tr class="memdesc:ac20fccf3f37ac898a607e7ca2aae7081"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임오버 화면 초기화 (텍스쳐, 위치)  <a href="#ac20fccf3f37ac898a607e7ca2aae7081">More...</a><br /></td></tr>
-<tr class="separator:ac20fccf3f37ac898a607e7ca2aae7081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga427bf0e70445f92f07adb6512985699d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga427bf0e70445f92f07adb6512985699d">InitSDL</a> (void)</td></tr>
+<tr class="memdesc:ga427bf0e70445f92f07adb6512985699d"><td class="mdescLeft">&#160;</td><td class="mdescRight">프로그램 수행에 필요한 초기화 과정 수행  <a href="group___init.html#ga427bf0e70445f92f07adb6512985699d">More...</a><br /></td></tr>
+<tr class="separator:ga427bf0e70445f92f07adb6512985699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82fb88870e950b4d0b484e2744d6b064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga82fb88870e950b4d0b484e2744d6b064">InitTTF</a> (void)</td></tr>
+<tr class="memdesc:ga82fb88870e950b4d0b484e2744d6b064"><td class="mdescLeft">&#160;</td><td class="mdescRight">TTF폰트 사용을 위한 초기화 과정 수행  <a href="group___init.html#ga82fb88870e950b4d0b484e2744d6b064">More...</a><br /></td></tr>
+<tr class="separator:ga82fb88870e950b4d0b484e2744d6b064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2128129f94d9519cfc62de7e308bac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#gaa2128129f94d9519cfc62de7e308bac7">QuitSDL</a> (int flag)</td></tr>
+<tr class="memdesc:gaa2128129f94d9519cfc62de7e308bac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료  <a href="group___init.html#gaa2128129f94d9519cfc62de7e308bac7">More...</a><br /></td></tr>
+<tr class="separator:gaa2128129f94d9519cfc62de7e308bac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ba0c53f3cc9980ebe30a2286632bb45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga6ba0c53f3cc9980ebe30a2286632bb45">QuitTTF</a> (void)</td></tr>
+<tr class="memdesc:ga6ba0c53f3cc9980ebe30a2286632bb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">연 폰트 파일을 닫고 TTF 엔진 종료  <a href="group___init.html#ga6ba0c53f3cc9980ebe30a2286632bb45">More...</a><br /></td></tr>
+<tr class="separator:ga6ba0c53f3cc9980ebe30a2286632bb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga0a26d5779d3a2a2c898c3f52b74ddf3a">InitMemorySet</a> (void)</td></tr>
+<tr class="memdesc:ga0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">전역 변수 메모리 내용 초기화  <a href="group___init.html#ga0a26d5779d3a2a2c898c3f52b74ddf3a">More...</a><br /></td></tr>
+<tr class="separator:ga0a26d5779d3a2a2c898c3f52b74ddf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab233da79a00de5b6a0752c031b1f9855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#gab233da79a00de5b6a0752c031b1f9855">InitScoreBoard</a> (void)</td></tr>
+<tr class="memdesc:gab233da79a00de5b6a0752c031b1f9855"><td class="mdescLeft">&#160;</td><td class="mdescRight">스코어보드 초기화  <a href="group___init.html#gab233da79a00de5b6a0752c031b1f9855">More...</a><br /></td></tr>
+<tr class="separator:gab233da79a00de5b6a0752c031b1f9855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga068fc32638e272bb7c61516d6efe4b9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga068fc32638e272bb7c61516d6efe4b9e">InitPlayer</a> (void)</td></tr>
+<tr class="memdesc:ga068fc32638e272bb7c61516d6efe4b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 초기화  <a href="group___init.html#ga068fc32638e272bb7c61516d6efe4b9e">More...</a><br /></td></tr>
+<tr class="separator:ga068fc32638e272bb7c61516d6efe4b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30c1a22616a4bc3d87ab7197913e62d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#ga30c1a22616a4bc3d87ab7197913e62d6">InitBullet</a> (void)</td></tr>
+<tr class="memdesc:ga30c1a22616a4bc3d87ab7197913e62d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">총알 초기화  <a href="group___init.html#ga30c1a22616a4bc3d87ab7197913e62d6">More...</a><br /></td></tr>
+<tr class="separator:ga30c1a22616a4bc3d87ab7197913e62d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac20fccf3f37ac898a607e7ca2aae7081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___init.html#gac20fccf3f37ac898a607e7ca2aae7081">InitGameOver</a> (void)</td></tr>
+<tr class="memdesc:gac20fccf3f37ac898a607e7ca2aae7081"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임오버 화면 초기화 (텍스쳐, 위치)  <a href="group___init.html#gac20fccf3f37ac898a607e7ca2aae7081">More...</a><br /></td></tr>
+<tr class="separator:gac20fccf3f37ac898a607e7ca2aae7081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a05b5a24325d46227633053ca49de6234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app.html">App</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a05b5a24325d46227633053ca49de6234">app</a></td></tr>
-<tr class="separator:a05b5a24325d46227633053ca49de6234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa98761129f4d5e69468dcbdddbd88d9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#aa98761129f4d5e69468dcbdddbd88d9d">player</a></td></tr>
-<tr class="separator:aa98761129f4d5e69468dcbdddbd88d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3969fcbadddf924ee352d7e232919bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a3969fcbadddf924ee352d7e232919bf5">bullet</a> [<a class="el" href="defs_8h.html#ac2f0ab514de41108a223c4edd49a6dfb">NUM_BULLETS</a>]</td></tr>
-<tr class="separator:a3969fcbadddf924ee352d7e232919bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30f03aaf13c260e57b759c650c99468e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#a30f03aaf13c260e57b759c650c99468e">game_over</a></td></tr>
-<tr class="separator:a30f03aaf13c260e57b759c650c99468e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afef3fdea043a22bb19f93f3799421010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_text.html">Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#afef3fdea043a22bb19f93f3799421010">score_board</a></td></tr>
-<tr class="separator:afef3fdea043a22bb19f93f3799421010"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3c21975ce19d3b28f11d50419e15ab9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#ae3c21975ce19d3b28f11d50419e15ab9">score_text</a> [<a class="el" href="defs_8h.html#aeca034f67218340ecb2261a22c2f3dcd">BUFSIZE</a>]</td></tr>
-<tr class="separator:ae3c21975ce19d3b28f11d50419e15ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef160b7437d94056f1dc59646cd5b87d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8h.html#aef160b7437d94056f1dc59646cd5b87d">score</a></td></tr>
-<tr class="separator:aef160b7437d94056f1dc59646cd5b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05b5a24325d46227633053ca49de6234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app.html">App</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#ga05b5a24325d46227633053ca49de6234">app</a></td></tr>
+<tr class="separator:ga05b5a24325d46227633053ca49de6234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa98761129f4d5e69468dcbdddbd88d9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#gaa98761129f4d5e69468dcbdddbd88d9d">player</a></td></tr>
+<tr class="separator:gaa98761129f4d5e69468dcbdddbd88d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3969fcbadddf924ee352d7e232919bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#ga3969fcbadddf924ee352d7e232919bf5">bullet</a> [<a class="el" href="defs_8h.html#ac2f0ab514de41108a223c4edd49a6dfb">NUM_BULLETS</a>]</td></tr>
+<tr class="separator:ga3969fcbadddf924ee352d7e232919bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30f03aaf13c260e57b759c650c99468e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e">game_over</a></td></tr>
+<tr class="separator:ga30f03aaf13c260e57b759c650c99468e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafef3fdea043a22bb19f93f3799421010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_text.html">Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#gafef3fdea043a22bb19f93f3799421010">score_board</a></td></tr>
+<tr class="separator:gafef3fdea043a22bb19f93f3799421010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3c21975ce19d3b28f11d50419e15ab9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9">score_text</a> [<a class="el" href="defs_8h.html#aeca034f67218340ecb2261a22c2f3dcd">BUFSIZE</a>]</td></tr>
+<tr class="separator:gae3c21975ce19d3b28f11d50419e15ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef160b7437d94056f1dc59646cd5b87d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d">score</a></td></tr>
+<tr class="separator:gaef160b7437d94056f1dc59646cd5b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 </p>
 <dl class="section author"><dt>Author</dt><dd>이성재 (<a href="#" onclick="location.href='mai'+'lto:'+'seo'+'ng'+'jae'+'.l'+'ee.'+'11'+'18@'+'gm'+'ail'+'.c'+'om'; return false;">seong<span style="display: none;">.nosp@m.</span>jae.<span style="display: none;">.nosp@m.</span>lee.1<span style="display: none;">.nosp@m.</span>118@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a30c1a22616a4bc3d87ab7197913e62d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30c1a22616a4bc3d87ab7197913e62d6">&#9670;&nbsp;</a></span>InitBullet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitBullet </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>총알 초기화 (텍스쳐 불러오기, 랜덤 위치에 소환, 총알-주인공 간 각도계산) </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="ac20fccf3f37ac898a607e7ca2aae7081"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac20fccf3f37ac898a607e7ca2aae7081">&#9670;&nbsp;</a></span>InitGameOver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitGameOver </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>게임오버 화면 초기화 (텍스쳐, 위치) </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a0a26d5779d3a2a2c898c3f52b74ddf3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a26d5779d3a2a2c898c3f52b74ddf3a">&#9670;&nbsp;</a></span>InitMemorySet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitMemorySet </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>모든 전역 변수의 메모리 내용 0으로 초기화 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a068fc32638e272bb7c61516d6efe4b9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a068fc32638e272bb7c61516d6efe4b9e">&#9670;&nbsp;</a></span>InitPlayer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitPlayer </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>플레이어 초기화 (텍스쳐 불러오기, 위치 설정, 체력 1로 설정) </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="ab233da79a00de5b6a0752c031b1f9855"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab233da79a00de5b6a0752c031b1f9855">&#9670;&nbsp;</a></span>InitScoreBoard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitScoreBoard </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>스코어보드 초기화(글씨 색깔, 위치) </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a427bf0e70445f92f07adb6512985699d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a427bf0e70445f92f07adb6512985699d">&#9670;&nbsp;</a></span>InitSDL()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitSDL </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>프로그램 수행에 필요한 초기화 과정 수행 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a82fb88870e950b4d0b484e2744d6b064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82fb88870e950b4d0b484e2744d6b064">&#9670;&nbsp;</a></span>InitTTF()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitTTF </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>TTF폰트 사용을 위한 초기화 과정 수행 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="aa2128129f94d9519cfc62de7e308bac7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2128129f94d9519cfc62de7e308bac7">&#9670;&nbsp;</a></span>QuitSDL()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void QuitSDL </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>프로그램 종료에 필요한 루틴을 수행하고 프로그램 종료 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flag</td><td>메인 함수에 넘겨줄 프로그램 리턴값</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<a id="a6ba0c53f3cc9980ebe30a2286632bb45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ba0c53f3cc9980ebe30a2286632bb45">&#9670;&nbsp;</a></span>QuitTTF()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void QuitTTF </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>연 폰트 파일을 닫고 TTF 엔진 종료 </p>
-<dl class="section return"><dt>Returns</dt><dd>리턴 값 없음 </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a05b5a24325d46227633053ca49de6234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05b5a24325d46227633053ca49de6234">&#9670;&nbsp;</a></span>app</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_app.html">App</a> app</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>프로그램 전체 단위로 관리하는 전역 객체 모음 </p>
-
-</div>
-</div>
-<a id="a3969fcbadddf924ee352d7e232919bf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3969fcbadddf924ee352d7e232919bf5">&#9670;&nbsp;</a></span>bullet</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_entity.html">Entity</a> bullet[<a class="el" href="defs_8h.html#ac2f0ab514de41108a223c4edd49a6dfb">NUM_BULLETS</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>총알의 속성을 설명하는 Entity형 구조체 </p>
-
-</div>
-</div>
-<a id="a30f03aaf13c260e57b759c650c99468e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30f03aaf13c260e57b759c650c99468e">&#9670;&nbsp;</a></span>game_over</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_entity.html">Entity</a> game_over</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>게임오버 화면의 속성을 설명하는 Entity형 구조체 </p>
-
-</div>
-</div>
-<a id="aa98761129f4d5e69468dcbdddbd88d9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa98761129f4d5e69468dcbdddbd88d9d">&#9670;&nbsp;</a></span>player</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_entity.html">Entity</a> player</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>주인공의 속성을 설명하는 Entity형 구조체 </p>
-
-</div>
-</div>
-<a id="aef160b7437d94056f1dc59646cd5b87d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef160b7437d94056f1dc59646cd5b87d">&#9670;&nbsp;</a></span>score</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int score</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>게임 스코어 </p>
-
-</div>
-</div>
-<a id="afef3fdea043a22bb19f93f3799421010"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afef3fdea043a22bb19f93f3799421010">&#9670;&nbsp;</a></span>score_board</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_text.html">Text</a> score_board</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>우상단 스코어보드 문자열을 설명하는 Text형 구조체 </p>
-
-</div>
-</div>
-<a id="ae3c21975ce19d3b28f11d50419e15ab9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3c21975ce19d3b28f11d50419e15ab9">&#9670;&nbsp;</a></span>score_text</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char score_text[<a class="el" href="defs_8h.html#aeca034f67218340ecb2261a22c2f3dcd">BUFSIZE</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>스코어보드에 출력할 문자열 </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="init_8h.html">init.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

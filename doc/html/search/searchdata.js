@@ -5,7 +5,9 @@ var indexSectionsWithContent =
   2: "adimu",
   3: "acdgilqrs",
   4: "abcfghkprstw",
-  5: "bfnps"
+  5: "bfnps",
+  6: "adgiu",
+  7: "d"
 };
 
 var indexSectionNames =
@@ -15,16 +17,20 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "defines"
+  5: "defines",
+  6: "groups",
+  7: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
+  1: "Data Structures",
   2: "Files",
   3: "Functions",
   4: "Variables",
-  5: "Macros"
+  5: "Macros",
+  6: "Modules",
+  7: "Pages"
 };
 
