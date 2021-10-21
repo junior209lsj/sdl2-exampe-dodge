@@ -85,7 +85,7 @@ $ proj_dir$ ./dodger
 
 ### 소스코드 매뉴얼
 
-`doc/html/index.html`을 실행하여 소스코드 매뉴얼을 확인할 수 있다. 파일별로 각 구조체 및 함수에 대한 정보를 열람 가능하다.
+`refman.pdf`이나 `doc/html/index.html`을 실행하여 소스코드 매뉴얼을 확인할 수 있다. 
 
 ## 프로그램 구조
 
