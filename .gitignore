@@ -1,3 +1,4 @@
 .vscode
 dodger
 *.o
+doc/latex
