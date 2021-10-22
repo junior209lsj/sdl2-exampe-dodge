@@ -48,7 +48,7 @@ void InitTTF(void) {
         exit(1);
     }
 
-    app.font = TTF_OpenFont("./ttf/Roboto-Regular.ttf", 20);
+    app.font = TTF_OpenFont("./ttf/LiberationSans-Regular.ttf", 20);
 
     return;
 }
