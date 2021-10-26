@@ -51,7 +51,7 @@ int main(void) {
         /* (3) 메인 로직 수행 후 객체들 화면에 그리기 */
         if (player.health) {
             /* 게임 진행 중일 시 */
-            LogicGame();
+            ActGame();
             DrawGame();
 
             if (tmpcnt++ == FPS) {
@@ -60,7 +60,7 @@ int main(void) {
             }
         } else {
             /* 게임 오버일 시 (게임 오버 화면 출력) */
-            LogicGameOver();
+            ActGameOver();
             DrawGameOver();
         }
 

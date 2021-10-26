@@ -27,7 +27,7 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 */
 #include "action.h"
 
-void LogicGame(void) {
+void ActGame(void) {
     ActPlayer();
     ActBullet();
     ActScoreBoard();
@@ -36,9 +36,9 @@ void LogicGame(void) {
     return;
 }
 
-void LogicGameOver(void) {
+void ActGameOver(void) {
     ActFinalScoreBoard();
-    ActGameOver();
+    ActGameOverScreen();
 
     return;
 }
@@ -130,7 +130,7 @@ void ActCheckDeath(void) {
     return;
 }
 
-void ActGameOver(void) {
+void ActGameOverScreen(void) {
     if (app.key_r) {
         InitPlayer();
         InitBullet();

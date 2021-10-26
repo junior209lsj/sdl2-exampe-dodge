@@ -109,7 +109,7 @@ $ proj_dir$ ./dodger
         /* (3) 메인 로직 수행 후 객체들 화면에 그리기 */
         if (player.health) {
             /* 게임 진행 중일 시 */
-            LogicGame();
+            ActGame();
             DrawGame();
 
             if (tmpcnt++ == FPS) {
@@ -118,7 +118,7 @@ $ proj_dir$ ./dodger
             }
         } else {
             /* 게임 오버일 시 (게임 오버 화면 출력) */
-            LogicGameOver();
+            ActGameOver();
             DrawGameOver();
         }
 
@@ -134,7 +134,7 @@ $ proj_dir$ ./dodger
 
  * clear: `ClearWindow()`
  * input: `GetInput()`
- * action: 게임이 진행 중일 땐 `LogicGame()`, 게임오버된 상태에서는 `LogicGameOver()`
+ * action: 게임이 진행 중일 땐 `ActGame()`, 게임오버된 상태에서는 `ActGameOver()`
  * draw: 게임이 진행 중일 땐 `DrawGame()`, 게임오버된 상태에서는 `DrawGameOver()`
  * show: `ShowWindow()`
  * delay: `SDL_Delay()`

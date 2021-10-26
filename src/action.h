@@ -50,7 +50,7 @@ extern int score;
  @return 리턴 값 없음
  @ingroup Action
 */
-void LogicGame(void);
+void ActGame(void);
 
 /**
  @brief 게임오버된 상태에 필요한 액션을 순차적으로 수행
@@ -61,7 +61,7 @@ void LogicGame(void);
  @return 리턴 값 없음
  @ingroup Action
  */
-void LogicGameOver(void);
+void ActGameOver(void);
 
 /**
  @brief 키보드 입력 상태에 따라 주인공의 액션을 수행. 누른 화살표 버튼에 따라
@@ -147,6 +147,6 @@ void ActCheckDeath(void);
  @return 리턴 값 없음
  @ingroup Action
 */
-void ActGameOver(void);
+void ActGameOverScreen(void);
 
 #endif
