@@ -10,10 +10,12 @@
 
 ```bash
 .
-├── REAMDME.md
+├── REAMDME.md # README
+├── LICENSE
+├── refman.html # 매뉴얼 (웹페이지로 보기)
+├── refman.pdf  # 매뉴얼 (pdf로 보기)
 ├── doc
 │   ├── html
-│   └── latex
 ├── gfx
 │   ├── Bullet.png
 │   ├── GameOver.png
@@ -35,14 +37,14 @@
 │   ├── utils.c
 │   └── utils.h
 └── ttf
-    └── Roboto-Regular.ttf
+    └── LiberationSans-Regular.ttf
 ```
 
 프로젝트 폴더는 위와 같은 트리 구조로 이루어져 있으며 각 폴더 내 파일의 기능은 다음과 같다.
 
-* doc: documentation 저장 폴더
-* gfx: 그림 파일 저장 폴더
-* src: 소스코드 저장 폴더
+* `doc`: documentation 저장 폴더
+* `gfx`: 그림 파일 저장 폴더
+* `src`: 소스코드 저장 폴더
 
 ### 소스파일 개요
 
