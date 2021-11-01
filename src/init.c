@@ -82,6 +82,7 @@ void InitMemorySet(void) {
 
 void InitScoreBoard(void) {
     score = 0;
+    /* Black */
     score_board.color.r = 0;
     score_board.color.g = 0;
     score_board.color.b = 0;
