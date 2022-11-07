@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['health',['health',['../struct_entity.html#ae448fb16f537982185a0c5e8db56bdc6',1,'Entity']]]
+  ['game_5fover',['game_over',['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h'],['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h'],['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h'],['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h'],['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h'],['../group___global_variables.html#ga30f03aaf13c260e57b759c650c99468e',1,'game_over():&#160;main.h']]]
 ];

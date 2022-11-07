@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['screen_5fheight',['SCREEN_HEIGHT',['../defs_8h.html#a6974d08a74da681b3957b2fead2608b8',1,'defs.h']]],
-  ['screen_5fwidth',['SCREEN_WIDTH',['../defs_8h.html#a2cd109632a6dcccaa80b43561b1ab700',1,'defs.h']]]
+  ['player_5fheight',['PLAYER_HEIGHT',['../defs_8h.html#a2712b06fd52f25adca031d05c3e0c09b',1,'defs.h']]],
+  ['player_5fspeed',['PLAYER_SPEED',['../defs_8h.html#af49bad41acef45feb40939c0cf9d5d35',1,'defs.h']]],
+  ['player_5fwidth',['PLAYER_WIDTH',['../defs_8h.html#a89e2ac9092225702ac543695d0771d38',1,'defs.h']]]
 ];

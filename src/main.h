@@ -28,7 +28,7 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 /**
  @mainpage Dodger!
 
-2021학년도 프로그래밍방법론및실습 프로젝트 예제인 총알 피하기 게임이다. SDL2
+서울시립대 기계정보공학과 프로그래밍방법론및실습 프로젝트 예제인 총알 피하기 게임이다. SDL2
 라이브러리를 이용하여 제작하였으며 SDL2의 기본적인 사용법과 코드 구조를 설명하기
 위하여 간단히 제작된 게임이다.
 
@@ -53,6 +53,7 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
  - \ref Action : 주인공과 총알, 그리고 점수판의 변화를 계산하고 변경
  - \ref Draw : 실제 오브젝트들을 화면에 보여주기 위한 기능
  - \ref Utils : 많이 사용하는 기능을 함수로 구현
+ - \ref Sound : 배경음 및 효과음 기능을 구현
 
  @section globals 전역변수 사용
 

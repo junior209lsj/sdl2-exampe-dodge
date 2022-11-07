@@ -93,17 +93,19 @@ $(document).ready(function(){initNavTree('main_8h.html','');});
 <code>#include &quot;<a class="el" href="input_8h_source.html">input.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="action_8h_source.html">action.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="draw_8h_source.html">draw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8h__incl.png" border="0" usemap="#main_8h" alt=""/></div>
 <map name="main_8h" id="main_8h">
-<area shape="rect" id="node2" href="defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="359,304,418,331"/>
-<area shape="rect" id="node12" href="init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="350,155,401,181"/>
-<area shape="rect" id="node14" href="input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="277,80,338,107"/>
-<area shape="rect" id="node15" href="action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="413,80,481,107"/>
-<area shape="rect" id="node16" href="draw_8h.html" title="텍스쳐 렌더링을 수행하는 함수 선언 " alt="" coords="526,155,587,181"/>
-<area shape="rect" id="node13" href="utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="393,229,451,256"/>
+<area shape="rect" id="node2" href="defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="402,304,461,331"/>
+<area shape="rect" id="node13" href="init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="359,155,410,181"/>
+<area shape="rect" id="node15" href="input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="291,80,353,107"/>
+<area shape="rect" id="node16" href="action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="428,80,496,107"/>
+<area shape="rect" id="node17" href="sound_8h.html" title="배경음, 효과음 관련 함수 선언 " alt="" coords="621,155,689,181"/>
+<area shape="rect" id="node18" href="draw_8h.html" title="텍스쳐 렌더링을 수행하는 함수 선언 " alt="" coords="535,155,597,181"/>
+<area shape="rect" id="node14" href="utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="403,229,460,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -133,6 +135,10 @@ Variables</h2></td></tr>
 <tr class="separator:gae3c21975ce19d3b28f11d50419e15ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaef160b7437d94056f1dc59646cd5b87d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d">score</a></td></tr>
 <tr class="separator:gaef160b7437d94056f1dc59646cd5b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga015eb04e0a2b9b43b073ff5abf39a6ea"><td class="memItemLeft" align="right" valign="top">Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#ga015eb04e0a2b9b43b073ff5abf39a6ea">bgm</a></td></tr>
+<tr class="separator:ga015eb04e0a2b9b43b073ff5abf39a6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ae93fe5207caf41fb5d96ca640a564"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___global_variables.html#ga30ae93fe5207caf41fb5d96ca640a564">death_effect</a></td></tr>
+<tr class="separator:ga30ae93fe5207caf41fb5d96ca640a564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>각 모듈 헤더 파일 include 및 전역 변수 선언 </p>

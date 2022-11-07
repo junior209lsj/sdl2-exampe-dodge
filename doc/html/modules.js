@@ -5,5 +5,6 @@ var modules =
     [ "Input", "group___input.html", "group___input" ],
     [ "Action", "group___action.html", "group___action" ],
     [ "Draw", "group___draw.html", "group___draw" ],
-    [ "Utils", "group___utils.html", "group___utils" ]
+    [ "Utils", "group___utils.html", "group___utils" ],
+    [ "Sound", "group___sound.html", "group___sound" ]
 ];

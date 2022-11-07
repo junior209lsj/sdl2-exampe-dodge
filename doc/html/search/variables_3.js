@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['font',['font',['../struct_app.html#abf5bfa705e66ffc1ddaa6ce46c960873',1,'App']]]
+  ['death_5feffect',['death_effect',['../group___global_variables.html#ga30ae93fe5207caf41fb5d96ca640a564',1,'death_effect():&#160;main.h'],['../group___global_variables.html#ga30ae93fe5207caf41fb5d96ca640a564',1,'death_effect():&#160;main.h']]]
 ];

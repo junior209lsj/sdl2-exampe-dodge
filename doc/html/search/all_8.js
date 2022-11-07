@@ -9,6 +9,7 @@ var searchData=
   ['initplayer',['InitPlayer',['../group___init.html#ga068fc32638e272bb7c61516d6efe4b9e',1,'InitPlayer(void):&#160;init.c'],['../group___init.html#ga068fc32638e272bb7c61516d6efe4b9e',1,'InitPlayer(void):&#160;init.c']]],
   ['initscoreboard',['InitScoreBoard',['../group___init.html#gab233da79a00de5b6a0752c031b1f9855',1,'InitScoreBoard(void):&#160;init.c'],['../group___init.html#gab233da79a00de5b6a0752c031b1f9855',1,'InitScoreBoard(void):&#160;init.c']]],
   ['initsdl',['InitSDL',['../group___init.html#ga427bf0e70445f92f07adb6512985699d',1,'InitSDL(void):&#160;init.c'],['../group___init.html#ga427bf0e70445f92f07adb6512985699d',1,'InitSDL(void):&#160;init.c']]],
+  ['initsound',['InitSound',['../group___sound.html#ga7653c9d91bc20ef678286370a50c0114',1,'InitSound(void):&#160;sound.c'],['../group___sound.html#ga7653c9d91bc20ef678286370a50c0114',1,'InitSound(void):&#160;sound.c']]],
   ['initttf',['InitTTF',['../group___init.html#ga82fb88870e950b4d0b484e2744d6b064',1,'InitTTF(void):&#160;init.c'],['../group___init.html#ga82fb88870e950b4d0b484e2744d6b064',1,'InitTTF(void):&#160;init.c']]],
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_2ec',['input.c',['../input_8c.html',1,'']]],

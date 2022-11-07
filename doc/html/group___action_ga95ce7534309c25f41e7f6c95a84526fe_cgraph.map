@@ -1,3 +1,4 @@
 <map id="ActCheckDeath" name="ActCheckDeath">
 <area shape="rect" id="node2" href="$group___utils.html#gad09f6116d9d2c9a447bff3c40b69d29a" title="두 Entity 간 충돌 여부를 판단 " alt="" coords="168,5,323,32"/>
+<area shape="rect" id="node3" href="$group___sound.html#gab4bccf4f5d3f348d040eb1bc97dbc910" title="사망시 효과음 재생 " alt="" coords="186,56,305,83"/>
 </map>

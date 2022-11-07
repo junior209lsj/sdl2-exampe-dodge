@@ -91,6 +91,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga53db3177844e1195be84da6b045d19cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#ga53db3177844e1195be84da6b045d19cb">CheckCollisionWall</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
 <tr class="memdesc:ga53db3177844e1195be84da6b045d19cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">주인공 혹은 총알이 벽 밖으로 넘어갔는지 확인  <a href="#ga53db3177844e1195be84da6b045d19cb">More...</a><br /></td></tr>
 <tr class="separator:ga53db3177844e1195be84da6b045d19cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga108e3df81f9bc0ce2ddcfae182544d7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#ga108e3df81f9bc0ce2ddcfae182544d7a">CheckCollisionSide</a> (<a class="el" href="struct_entity.html">Entity</a> *object)</td></tr>
+<tr class="memdesc:ga108e3df81f9bc0ce2ddcfae182544d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">주인공 혹은 총알이 어느 방향 벽과 충돌했는지 확인  <a href="#ga108e3df81f9bc0ce2ddcfae182544d7a">More...</a><br /></td></tr>
+<tr class="separator:ga108e3df81f9bc0ce2ddcfae182544d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#gad09f6116d9d2c9a447bff3c40b69d29a">CheckCollisionObjects</a> (<a class="el" href="struct_entity.html">Entity</a> *object_a, <a class="el" href="struct_entity.html">Entity</a> *object_b)</td></tr>
 <tr class="memdesc:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">두 <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 간 충돌 여부를 판단  <a href="#gad09f6116d9d2c9a447bff3c40b69d29a">More...</a><br /></td></tr>
 <tr class="separator:gad09f6116d9d2c9a447bff3c40b69d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +146,34 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>충돌했으면 1, 충돌하지 않았으면 0 </dd></dl>
+
+</div>
+</div>
+<a id="ga108e3df81f9bc0ce2ddcfae182544d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga108e3df81f9bc0ce2ddcfae182544d7a">&#9670;&nbsp;</a></span>CheckCollisionSide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckCollisionSide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>주인공 혹은 총알이 어느 방향 벽과 충돌했는지 확인 </p>
+<p>공이 튕기는 물리엔진을 구현하기 위해, <a class="el" href="struct_entity.html" title="Entity: 게임 내에서 움직이는 물체를 구현하기 위한 구조체(주인공, 총알) ">Entity</a> 객체가 어느 쪽 벽과 충돌했는지 확인한다.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>탐지 대상 Entity형 구조체</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>부딫힘이 없으면 0 왼쪽 벽과 부딫히면 <a class="el" href="defs_8h.html#a116554c107df8fc01a4ba0b69bb1171f">LEFT_WALL</a> 오른쪽 벽과 부딫히면 <a class="el" href="defs_8h.html#a7a9ff4af55a52a1d25d42a61253307f6">RIGHT_WALL</a> 위 벽과 부딫히면 <a class="el" href="defs_8h.html#a61987d8469391b3cd6ecff047cfb05e7">TOP_WALL</a> 아래 벽과 부딫히면 <a class="el" href="defs_8h.html#a6feda6df1811c85b4c25d2fa8c8a852d">BOTTOM_WALL</a> </dd></dl>
 
 </div>
 </div>

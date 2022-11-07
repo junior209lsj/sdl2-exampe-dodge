@@ -92,14 +92,16 @@ $(document).ready(function(){initNavTree('action_8h.html','');});
 <div class="textblock"><code>#include &quot;<a class="el" href="init_8h_source.html">init.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for action.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="action_8h__incl.png" border="0" usemap="#action_8h" alt=""/></div>
 <map name="action_8h" id="action_8h">
-<area shape="rect" id="node2" href="init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="309,80,359,107"/>
-<area shape="rect" id="node3" href="defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="359,229,418,256"/>
-<area shape="rect" id="node13" href="utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="360,155,417,181"/>
+<area shape="rect" id="node2" href="init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="326,80,377,107"/>
+<area shape="rect" id="node3" href="defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="402,229,461,256"/>
+<area shape="rect" id="node14" href="utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="369,155,427,181"/>
+<area shape="rect" id="node15" href="sound_8h.html" title="배경음, 효과음 관련 함수 선언 " alt="" coords="503,155,571,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -127,7 +129,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gad1c341bd8d66cfa6307f9eda7fcb517f"><td class="mdescLeft">&#160;</td><td class="mdescRight">키보드 입력 상태에 따라 주인공의 액션을 수행. 누른 화살표 버튼에 따라 움직이고, 화면 밖으로 나갈 수 없음.  <a href="group___action.html#gad1c341bd8d66cfa6307f9eda7fcb517f">More...</a><br /></td></tr>
 <tr class="separator:gad1c341bd8d66cfa6307f9eda7fcb517f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga94b64a686b9deac756fc84a1f21d182a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___action.html#ga94b64a686b9deac756fc84a1f21d182a">ActBullet</a> (void)</td></tr>
-<tr class="memdesc:ga94b64a686b9deac756fc84a1f21d182a"><td class="mdescLeft">&#160;</td><td class="mdescRight">총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고, 화면 밖으로 나가면 리스폰됨.  <a href="group___action.html#ga94b64a686b9deac756fc84a1f21d182a">More...</a><br /></td></tr>
+<tr class="memdesc:ga94b64a686b9deac756fc84a1f21d182a"><td class="mdescLeft">&#160;</td><td class="mdescRight">총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고, 벽에 닿으면 운동에너지가 보존되는 완전탄성충돌을 한다.  <a href="group___action.html#ga94b64a686b9deac756fc84a1f21d182a">More...</a><br /></td></tr>
 <tr class="separator:ga94b64a686b9deac756fc84a1f21d182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7d7e08b4f43179e1c112660ebf499f38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___action.html#ga7d7e08b4f43179e1c112660ebf499f38">ActScoreBoard</a> (void)</td></tr>
 <tr class="memdesc:ga7d7e08b4f43179e1c112660ebf499f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">스코어보드 문자열 생성 (전역변수 score에 따라 현재 점수 표시)  <a href="group___action.html#ga7d7e08b4f43179e1c112660ebf499f38">More...</a><br /></td></tr>

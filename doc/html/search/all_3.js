@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['death_5feffect',['death_effect',['../group___global_variables.html#ga30ae93fe5207caf41fb5d96ca640a564',1,'death_effect():&#160;main.h'],['../group___global_variables.html#ga30ae93fe5207caf41fb5d96ca640a564',1,'death_effect():&#160;main.h']]],
   ['defs_2eh',['defs.h',['../defs_8h.html',1,'']]],
   ['draw',['Draw',['../group___draw.html',1,'']]],
   ['draw_2ec',['draw.c',['../draw_8c.html',1,'']]],

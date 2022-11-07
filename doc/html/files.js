@@ -11,6 +11,7 @@ var files =
     [ "input.h", "input_8h.html", "input_8h" ],
     [ "main.c", "main_8c.html", "main_8c" ],
     [ "main.h", "main_8h.html", "main_8h" ],
+    [ "sound.h", "sound_8h.html", "sound_8h" ],
     [ "utils.c", "utils_8c.html", "utils_8c" ],
     [ "utils.h", "utils_8h.html", "utils_8h" ]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['window',['window',['../struct_app.html#aaa8e409e04dcf575ef63fd5fb3db06f9',1,'App']]]
+  ['utils',['Utils',['../group___utils.html',1,'']]],
+  ['utils_2ec',['utils.c',['../utils_8c.html',1,'']]],
+  ['utils_2eh',['utils.h',['../utils_8h.html',1,'']]]
 ];

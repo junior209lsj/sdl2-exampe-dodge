@@ -1,8 +1,9 @@
 <map id="main.h" name="main.h">
-<area shape="rect" id="node2" href="$defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="359,304,418,331"/>
-<area shape="rect" id="node12" href="$init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="350,155,401,181"/>
-<area shape="rect" id="node14" href="$input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="277,80,338,107"/>
-<area shape="rect" id="node15" href="$action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="413,80,481,107"/>
-<area shape="rect" id="node16" href="$draw_8h.html" title="텍스쳐 렌더링을 수행하는 함수 선언 " alt="" coords="526,155,587,181"/>
-<area shape="rect" id="node13" href="$utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="393,229,451,256"/>
+<area shape="rect" id="node2" href="$defs_8h.html" title="데이터타입 및 상수 정의 " alt="" coords="402,304,461,331"/>
+<area shape="rect" id="node13" href="$init_8h.html" title="무한 루프 진입 전 객체 및 SDL 요소 초기화를 위한 함수 선언 " alt="" coords="359,155,410,181"/>
+<area shape="rect" id="node15" href="$input_8h.html" title="키보드 입력 발생 시 처리하는 함수 선언 " alt="" coords="291,80,353,107"/>
+<area shape="rect" id="node16" href="$action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="428,80,496,107"/>
+<area shape="rect" id="node17" href="$sound_8h.html" title="배경음, 효과음 관련 함수 선언 " alt="" coords="621,155,689,181"/>
+<area shape="rect" id="node18" href="$draw_8h.html" title="텍스쳐 렌더링을 수행하는 함수 선언 " alt="" coords="535,155,597,181"/>
+<area shape="rect" id="node14" href="$utils_8h.html" title="액션 수행에 필요한 부가적 계산을 수행하는 함수 선언 " alt="" coords="403,229,460,256"/>
 </map>

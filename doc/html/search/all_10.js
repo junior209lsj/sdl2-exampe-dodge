@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['text',['Text',['../struct_text.html',1,'']]],
-  ['texture',['texture',['../struct_entity.html#a859b8efbf9abe8e82757ee5c75a0c97c',1,'Entity::texture()'],['../struct_text.html#a859b8efbf9abe8e82757ee5c75a0c97c',1,'Text::texture()']]],
-  ['theta',['theta',['../struct_entity.html#aca81c35c21e3a5f7f3a8d24504e76664',1,'Entity']]]
+  ['score',['score',['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h'],['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h'],['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h'],['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h'],['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h'],['../group___global_variables.html#gaef160b7437d94056f1dc59646cd5b87d',1,'score():&#160;main.h']]],
+  ['score_5fboard',['score_board',['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h'],['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h'],['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h'],['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h'],['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h'],['../group___global_variables.html#gafef3fdea043a22bb19f93f3799421010',1,'score_board():&#160;main.h']]],
+  ['score_5ftext',['score_text',['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h'],['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h'],['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h'],['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h'],['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h'],['../group___global_variables.html#gae3c21975ce19d3b28f11d50419e15ab9',1,'score_text():&#160;main.h']]],
+  ['screen_5fheight',['SCREEN_HEIGHT',['../defs_8h.html#a6974d08a74da681b3957b2fead2608b8',1,'defs.h']]],
+  ['screen_5fwidth',['SCREEN_WIDTH',['../defs_8h.html#a2cd109632a6dcccaa80b43561b1ab700',1,'defs.h']]],
+  ['showwindow',['ShowWindow',['../group___draw.html#ga17ef8abf91a443ec16525f4d95d7836e',1,'ShowWindow(void):&#160;draw.c'],['../group___draw.html#ga17ef8abf91a443ec16525f4d95d7836e',1,'ShowWindow(void):&#160;draw.c']]],
+  ['sound',['Sound',['../group___sound.html',1,'']]],
+  ['sound_2eh',['sound.h',['../sound_8h.html',1,'']]],
+  ['surface',['surface',['../struct_text.html#a2f5cac12e913bcfcff660305bf88dd3b',1,'Text']]]
 ];

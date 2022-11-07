@@ -1,0 +1,6 @@
+<map id="sound.h" name="sound.h">
+<area shape="rect" id="node2" href="$action_8h.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 선언 ..." alt="" coords="23,80,91,107"/>
+<area shape="rect" id="node4" href="$main_8h.html" title="각 모듈 헤더 파일 include 및 전역 변수 선언 " alt="" coords="98,155,159,181"/>
+<area shape="rect" id="node3" href="$action_8c.html" title="키보드 입력, 현재 주인공 및 총알의 상태를 바탕으로 액션을 수행 (상태를 변경)하는 함수 정의 ..." alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="dodger 게임 main 함수를 정의한 소스 파일 " alt="" coords="98,229,159,256"/>
+</map>
