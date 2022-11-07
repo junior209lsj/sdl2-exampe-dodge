@@ -58,6 +58,10 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 
  Utils 모듈은 자주 사용하는 계산을 함수 형태로 구현한 모듈이다.
 
+ @defgroup Sound
+
+ Sound 모듈은 배경음악 및 효과음 관리를 담당하는 모듈이다.
+
 
 */
 
