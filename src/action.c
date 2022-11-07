@@ -75,11 +75,29 @@ void ActPlayer(void) {
 void ActBullet(void) {
 
     for (int i = 0; i < NUM_BULLETS; i++) {
-
-        bullet[i].pos.x += (int)(BULLET_SPEED * cos(bullet[i].theta));
-        bullet[i].pos.y += (int)(BULLET_SPEED * sin(bullet[i].theta));
+        bullet[i].pos.x += (int)(bullet[i].v_x);
+        bullet[i].pos.y += (int)(bullet[i].v_y);
         if (CheckCollisionWall(&bullet[i])) {
-            RandSpawnBullet(&bullet[i]);
+            switch (CheckCollisionSide(&bullet[i])) {
+                case LEFT_WALL: {
+                    bullet[i].v_x *= -1;
+                    break;
+                }
+                case RIGHT_WALL: {
+                    bullet[i].v_x *= -1;
+                    break;
+                }
+                case TOP_WALL: {
+                    bullet[i].v_y *= -1;
+                    break;
+                }
+                case BOTTOM_WALL: {
+                    bullet[i].v_y *= -1;
+                    break;
+                }
+                default:
+                break;
+            }
         }
     }
 

@@ -72,6 +72,7 @@ app ) 주인공 ( \ref player ), 총알 ( \ref bullet ), 점수판 ( \ref score_
 #include "input.h"
 #include "action.h"
 #include "draw.h"
+#include "sound.h"
 
 /*사용하는 전역 변수*/
 /// @ingroup GlobalVariables
@@ -88,5 +89,7 @@ Text score_board;               /**< 우상단 스코어보드 문자열을 설�
 char score_text[BUFSIZE];       /**< 스코어보드에 출력할 문자열*/
 /// @ingroup GlobalVariables
 int score;                      /**< 게임 스코어*/
+/// @ingroup GlobalVariables
+Mix_Music *bgm;                 /**< 배경음악*/
 
 #endif

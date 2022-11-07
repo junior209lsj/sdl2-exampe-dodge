@@ -51,6 +51,23 @@ extern int score;
 int CheckCollisionWall(Entity *object);
 
 /**
+ @brief 주인공 혹은 총알이 어느 방향 벽과 충돌했는지 확인
+
+ 공이 튕기는 물리엔진을 구현하기 위해, Entity 객체가 어느 쪽 벽과 충돌했는지 확인한다.
+
+ @param[in] object 탐지 대상 Entity형 구조체
+
+ @return
+       부딫힘이 없으면 0
+       왼쪽 벽과 부딫히면 \ref LEFT_WALL
+       오른쪽 벽과 부딫히면 \ref RIGHT_WALL
+       위 벽과 부딫히면 \ref TOP_WALL
+       아래 벽과 부딫히면 \ref BOTTOM_WALL
+ @ingroup Utils
+*/
+int CheckCollisionSide(Entity *object);
+
+/**
  @brief 두 Entity 간 충돌 여부를 판단
 
  두 Entity 간 충돌 여부를 판단한다. \ref Entity.pos 는 SDL2 라이브러리에서

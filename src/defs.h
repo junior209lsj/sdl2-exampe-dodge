@@ -74,6 +74,7 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 #include "SDL2/SDL_ttf.h"
+#include "SDL2/SDL_mixer.h"
 
 /*상수 매크로 정의*/
 #define FPS 60              /**< 게임 FPS*/
@@ -91,7 +92,12 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 #define BULLET_SPEED 6      /**< 총알 객체 속도(단위시간당 이동량)*/
 #define NUM_BULLETS 16      /**< 총알 전체 갯수*/
 
-#define FONTSIZE 20 /**< 출력할 문자열 폰트 크기*/
+#define FONTSIZE 20         /**< 출력할 문자열 폰트 크기*/
+
+#define LEFT_WALL 1         /**< 충돌 판정 시 왼쪽 벽을 나타내는 상수*/
+#define RIGHT_WALL 2        /**< 충돌 판정 시 오른쪽 벽을 나타내는 상수*/
+#define TOP_WALL 3          /**< 충돌 판정 시 위쪽 벽을 나타내는 상수*/
+#define BOTTOM_WALL 4       /**< 충돌 판정 시 아래쪽 벽을 나타내는 상수*/
 
 /*구조체 정의*/
 /**
@@ -115,6 +121,8 @@ typedef struct {
     SDL_Rect pos;           /**< 직사각형 객체의 상태를 나타내기 위한 구조체
                                 여기에 객체의 좌표, 위치 저장*/
     double theta;           /**< 총알-주인공 간 각도를 저장하는 변수*/
+    double v_x;             /**< 총알-주인공 간 x방향 속도벡터*/
+    double v_y;             /**< 총알-주인공 간 y방향 속도벡터*/
     int health;             /**< 주인공의 체력 상태를 나타내는 변수 (생존 1, 사망 0)*/
     SDL_Texture *texture;   /**< 텍스쳐를 담고 있는 구조체 (그림파일을 열어
                                  텍스쳐에 저장)*/

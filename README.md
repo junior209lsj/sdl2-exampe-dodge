@@ -36,6 +36,8 @@
 │   ├── makefile
 │   ├── utils.c
 │   └── utils.h
+│   ├── sound.c
+│   └── sound.h
 └── ttf
     └── LiberationSans-Regular.ttf
 ```
@@ -64,6 +66,8 @@ src폴더 내에 있는 소스파일은 각각 다음과 같은 내용이 정의
 * `makefile`: `make`명령을 실행하기 위한 컴파일 규칙
 * `utils.c`: 액션 수행에 필요한 부가적 계산을 수행하는 함수 정의
 * `utils.h`: 액션 수행에 필요한 부가적 계산을 수행하는 함수 선언
+* `sound.c`: 배경음, 효과음 관련 기능을 수행하는 함수 정의
+* `sound.h`: 배경음, 효과음 관련 기능을 수행하는 함수 선언
 
 ### 의존성 라이브러리
 

@@ -36,6 +36,21 @@ int CheckCollisionWall(Entity *object) {
     }
 }
 
+int CheckCollisionSide(Entity *object) {
+
+    if (object->pos.x < 0) {
+        return LEFT_WALL;
+    } else if (object->pos.x + object->pos.w > SCREEN_WIDTH) {
+        return RIGHT_WALL;
+    } else if (object->pos.y < 0) {
+        return TOP_WALL;
+    } else if (object->pos.y + object->pos.h > SCREEN_HEIGHT) {
+        return BOTTOM_WALL;
+    } else {
+        return 0;
+    }
+}
+
 int CheckCollisionObjects(Entity *object_a, Entity *object_b) {
 
     if (SDL_HasIntersection(&(object_a->pos), &(object_b->pos))) {
@@ -77,6 +92,9 @@ void RandSpawnBullet(Entity *object) {
                                                direction_y * direction_y));
     object->theta =
         RandDouble(direction - (M_PI / 10.0), (direction + (M_PI / 10.0)));
+    
+    object->v_x = BULLET_SPEED * cos(object->theta);
+    object->v_y = BULLET_SPEED * sin(object->theta);
     
     return;
 }

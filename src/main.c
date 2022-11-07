@@ -39,6 +39,10 @@ int main(void) {
     InitPlayer();
     InitBullet();
     InitScoreBoard();
+    InitBGM();
+
+    /* BGM은 계속 재생되므로 루프 밖에서 재생 */
+    PlayBGM();
 
     /* 2. 프로그램 무한 루프 */
     for (;;) {

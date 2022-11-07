@@ -81,11 +81,13 @@ void ActPlayer(void);
 
 /**
  @brief 총알의 액션을 수행. 주인공이 있는 방향으로 랜덤하게 날아가고,
-        화면 밖으로 나가면 리스폰됨.
+        벽에 닿으면 운동에너지가 보존되는 완전탄성충돌을 한다.
 
  총알은 정해진 방향으로 \ref BULLET_SPEED 만큼 이동한다.
  총알의 이동 방향은 \ref RandSpawnBullet 함수에서 주인공과 총알의 방향  \f$ \pm
- 18^{\circ} \f$ 사이로 랜덤하게 결정돠어 \ref Entity.theta 에 저장되어 있다.
+ 18^{\circ} \f$ 사이로 랜덤하게 결정돠어 \ref Entity.theta 에 저장된다.
+ \ref Entity.theta 와 \ref BULLET_SPEED 을 바탕으로 속도벡터를 \ref Entity.v_x ,
+ \ref Entity.v_y 에 저장한다.
 
  @remark 전역 변수 \ref bullet 에 접근한다.
 
