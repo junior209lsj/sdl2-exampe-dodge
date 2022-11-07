@@ -31,6 +31,7 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 #include "init.h"
 #include "defs.h"
 #include "utils.h"
+#include "sound.h"
 
 /* main.h에 정의된 전역 변수 사용 */
 extern App app;

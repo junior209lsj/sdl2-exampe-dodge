@@ -141,6 +141,8 @@ void ActCheckDeath(void) {
     for (int i = 0; i < NUM_BULLETS; i++) {
         if (CheckCollisionObjects(&player, &bullet[i])) {
             player.health = 0;
+            PlayDeathEffect();
+            Mix_PauseMusic();
             break;
         }
     }
@@ -154,6 +156,7 @@ void ActGameOverScreen(void) {
         InitBullet();
         InitScoreBoard();
         InitGameOver();
+        Mix_ResumeMusic();
     }
 
     return;

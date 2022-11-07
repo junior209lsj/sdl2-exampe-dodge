@@ -39,7 +39,8 @@ int main(void) {
     InitPlayer();
     InitBullet();
     InitScoreBoard();
-    InitBGM();
+    InitSound();
+    LoadSound();
 
     /* BGM은 계속 재생되므로 루프 밖에서 재생 */
     PlayBGM();

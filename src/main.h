@@ -91,5 +91,7 @@ char score_text[BUFSIZE];       /**< 스코어보드에 출력할 문자열*/
 int score;                      /**< 게임 스코어*/
 /// @ingroup GlobalVariables
 Mix_Music *bgm;                 /**< 배경음악*/
+/// @ingroup GlobalVariables
+Mix_Chunk *death_effect;         /**< 주인공 사망시 효과음*/
 
 #endif

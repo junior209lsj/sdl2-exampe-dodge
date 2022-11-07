@@ -27,15 +27,25 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 
 #include "sound.h"
 
-void InitBGM(void) {
+void InitSound(void) {
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+}
+
+void LoadSound(void) {
     bgm = Mix_LoadMUS("./sound/bgm.mp3");
+    death_effect = Mix_LoadWAV("./sound/dead.wav");
 
     return;
 }
 
 void PlayBGM(void) {
     Mix_PlayMusic(bgm, -1);
+
+    return;
+}
+
+void PlayDeathEffect(void) {
+    Mix_PlayChannel(-1, death_effect, 0);
 
     return;
 }

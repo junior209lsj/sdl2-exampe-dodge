@@ -31,8 +31,12 @@ https://www.parallelrealities.co.uk/tutorials/) [21 Oct 2021]
 #include "defs.h"
 
 extern Mix_Music *bgm;
+extern Mix_Chunk *death_effect;
 
-void InitBGM(void);
+void InitSound(void);
+void LoadSound(void);
+
 void PlayBGM(void);
+void PlayDeathEffect(void);
 
 #endif
