@@ -18,6 +18,9 @@
 │   ├── Bullet.png
 │   ├── GameOver.png
 │   └── Player.png
+├── sound
+│   ├── bgm.mp3
+│   └── dead.wav
 ├── src
 │   ├── Doxyfile
 │   ├── action.c
