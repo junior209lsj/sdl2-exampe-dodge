@@ -12,8 +12,6 @@
 .
 ├── REAMDME.md # README
 ├── LICENSE
-├── refman.html # 매뉴얼 (웹페이지로 보기)
-├── refman.pdf  # 매뉴얼 (pdf로 보기)
 ├── doc
 │   ├── html
 ├── gfx
