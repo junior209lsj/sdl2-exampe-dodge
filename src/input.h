@@ -40,6 +40,8 @@ extern Entity game_over;
 extern Text score_board;
 extern char score_text[BUFSIZE];
 extern int score;
+extern Mix_Music *bgm;
+extern Mix_Chunk *death_effect;
 
 /**
  @brief 외부 입력을 받아 적절한 동작을 취하도록 한다.
