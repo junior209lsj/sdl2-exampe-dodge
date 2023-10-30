@@ -110,10 +110,14 @@ void ActScoreBoard(void) {
     strcpy(score_text, "Your Score: ");
     SDL_itoa(score, tmp, 10);
     strcat(score_text, tmp);
+    SDL_FreeSurface(score_board.surface);
+    SDL_DestroyTexture(score_board.texture);
     score_board.surface =
         TTF_RenderText_Solid(app.font, score_text, score_board.color);
     score_board.texture =
         SDL_CreateTextureFromSurface(app.renderer, score_board.surface);
+    SDL_QueryTexture(score_board.texture, NULL, NULL, &(score_board.pos.w),
+                     &(score_board.pos.h));
 
     return;
 }
@@ -129,10 +133,14 @@ void ActFinalScoreBoard(void) {
     strcpy(score_text, "Your Final Score: ");
     SDL_itoa(score, tmp, 10);
     strcat(score_text, tmp);
+    SDL_FreeSurface(score_board.surface);
+    SDL_DestroyTexture(score_board.texture);
     score_board.surface =
         TTF_RenderText_Solid(app.font, score_text, score_board.color);
     score_board.texture =
         SDL_CreateTextureFromSurface(app.renderer, score_board.surface);
+    SDL_QueryTexture(score_board.texture, NULL, NULL, &(score_board.pos.w),
+                     &(score_board.pos.h));
 
     return;
 }

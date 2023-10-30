@@ -59,18 +59,12 @@ void DrawGameOver(void) {
 }
 
 void RenderEntity(Entity *object) {
-
-    SDL_QueryTexture(object->texture, NULL, NULL, &(object->pos.w),
-                     &(object->pos.h));
-    SDL_RenderCopy(app.renderer, object->texture, NULL, &(object->pos));
+     SDL_RenderCopy(app.renderer, object->texture, NULL, &(object->pos));
 
     return;
 }
 
 void RenderScoreBoard(Text *object) {
-
-    SDL_QueryTexture(object->texture, NULL, NULL, &(object->pos.w),
-                     &(object->pos.h));
     SDL_RenderCopy(app.renderer, object->texture, NULL, &(object->pos));
 
     return;

@@ -34,15 +34,6 @@ void GetInput(void) {
         switch (event.type) {
             /*창닫기 버튼을 누른 경우*/
             case SDL_QUIT:
-                Mix_FreeChunk(death_effect);
-                Mix_FreeMusic(bgm);
-                SDL_DestroyTexture(player.texture);
-                for (int i = 0; i < NUM_BULLETS; i++) {
-                    SDL_DestroyTexture(bullet[i].texture);
-                }
-                SDL_DestroyTexture(game_over.texture);
-                SDL_DestroyTexture(score_board.texture);
-                SDL_FreeSurface(score_board.surface);
                 QuitSDL(0);
                 break;
             /*키보드 버튼을 뗐을 경우*/

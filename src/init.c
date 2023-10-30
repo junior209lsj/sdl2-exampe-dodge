@@ -54,9 +54,24 @@ void InitTTF(void) {
 }
 
 void QuitSDL(int flag) {
+    Mix_FreeChunk(death_effect);
+    Mix_FreeMusic(bgm);
+    SDL_DestroyTexture(player.texture);
+    for (int i = 0; i < NUM_BULLETS; i++) {
+        SDL_DestroyTexture(bullet[i].texture);
+    }
+    SDL_FreeSurface(score_board.surface);
+    SDL_DestroyTexture(game_over.texture);
+    SDL_DestroyTexture(score_board.texture);
+    
     SDL_DestroyRenderer(app.renderer);
+    app.renderer = NULL;
     SDL_DestroyWindow(app.window);
+    app.window = NULL;
+    SDL_CloseAudio();
+
     QuitTTF();
+    IMG_Quit();
     SDL_Quit();
     exit(flag);
 
@@ -99,6 +114,8 @@ void InitPlayer(void) {
     player.pos.x = SCREEN_WIDTH / 2;
     player.pos.y = SCREEN_HEIGHT / 2;
     player.health = 1;
+    SDL_QueryTexture(player.texture, NULL, NULL, &(player.pos.w),
+                     &(player.pos.h));
 
     return;
 }
@@ -106,6 +123,8 @@ void InitPlayer(void) {
 void InitBullet(void) {
     for (int i = 0; i < NUM_BULLETS; i++) {
         bullet[i].texture = IMG_LoadTexture(app.renderer, "./gfx/Bullet.png");
+        SDL_QueryTexture(bullet[i].texture, NULL, NULL, &(bullet[i].pos.w),
+                        &(bullet[i].pos.h));
         RandSpawnBullet(&bullet[i]);
     }
 
@@ -114,6 +133,8 @@ void InitBullet(void) {
 
 void InitGameOver(void) {
     game_over.texture = IMG_LoadTexture(app.renderer, "./gfx/GameOver.png");
+    SDL_QueryTexture(game_over.texture, NULL, NULL, &(game_over.pos.w),
+                     &(game_over.pos.h));
     game_over.pos.x = 0;
     game_over.pos.y = 0;
 }

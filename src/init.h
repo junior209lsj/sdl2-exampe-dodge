@@ -38,6 +38,8 @@ extern Entity game_over;
 extern Text score_board;
 extern char score_text[BUFSIZE];
 extern int score;
+extern Mix_Music *bgm;
+extern Mix_Chunk *death_effect;
 
 /**
  @brief 프로그램 수행에 필요한 초기화 과정 수행
