@@ -65,9 +65,7 @@ void QuitSDL(int flag) {
     SDL_DestroyTexture(score_board.texture);
     
     SDL_DestroyRenderer(app.renderer);
-    app.renderer = NULL;
     SDL_DestroyWindow(app.window);
-    app.window = NULL;
     SDL_CloseAudio();
 
     QuitTTF();
